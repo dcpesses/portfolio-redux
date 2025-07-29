@@ -12,7 +12,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/vite-react-ts-gh">
+      <BrowserRouter basename="/portfolio-redux">
         <App />
       </BrowserRouter>
     </Provider>
