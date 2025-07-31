@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
 import Navbar from 'react-bootstrap/Navbar';
 
+import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg?react';
 import './header.css';
 
 function Header() {
@@ -9,7 +9,9 @@ function Header() {
     <Navbar id="header" collapseOnSelect expand="md" data-bs-theme="dark">
       <Container fluid>
         <Navbar.Brand href="#home">
-          <div><Image src="https://portfolio.dannyzone.com/images/dannyzone-dot-com3.png" height="59px" alt="DannyZone.com - The musings of a creative developer&#8230;" /></div>
+          <div aria-label="Dannyzone dot com site branding">
+            <DannyzoneLogo height="59" />
+          </div>
         </Navbar.Brand>
       </Container>
     </Navbar>
