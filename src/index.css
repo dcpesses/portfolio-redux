@@ -9,3 +9,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+	font-family: 'GilliesGotDLig';
+	src: url('assets/fonts/GilliesGotD-Ligh.eot');
+	src: url('assets/fonts/GilliesGotD-Ligh.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/GilliesGotD-Ligh.woff2') format('woff2'),
+		url('assets/fonts/GilliesGotD-Ligh.woff') format('woff'),
+		url('assets/fonts/GilliesGotD-Ligh.ttf') format('truetype'),
+		url('assets/fonts/GilliesGotD-Ligh.svg#GilliesGotD-Ligh') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
