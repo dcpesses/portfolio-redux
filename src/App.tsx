@@ -3,6 +3,8 @@ import Demo from '@/pages/demo';
 import NotFound from '@/pages/not-found';
 import logo from '@/assets/logo.svg';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@/App.css';
 
 declare global {
