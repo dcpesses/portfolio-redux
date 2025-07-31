@@ -1,0 +1,42 @@
+.text-gray-100 { color: #f1f5f9; }
+.text-gray-200 { color: #e5e7eb; }
+.text-gray-300 { color: #d1d5db; }
+.text-gray-400 { color: #9ca3af; }
+.hover-text-white:hover { color: #ffffff; }
+.text-cyan { color: #22d3ee; } /* cyan-400 */
+.text-cyan:hover { text-decoration: underline; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(to bottom right, #0ea5e9, #22d3ee); /* sky-500 to cyan-400 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Icon stroke color */
+.icon-stroke {
+  stroke: #0891b2; /* cyan-600 */
+}
+
+/* Hover animation similar to translate-y-1 */
+.icon-hover {
+  transition: transform 0.2s ease;
+}
+.icon-hover:hover {
+  transform: translateY(0.25rem);
+}
+
+/* Backgrounds (e.g., project cards) */
+.bg-slate-800 {
+  background-color: #1e293b;
+}
+
+/* Tag styling like .rounded-md px-2 py-1 text-xs font-semibold bg-* text-* */
+.badge-tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+}
