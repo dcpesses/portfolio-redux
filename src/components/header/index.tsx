@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg?react';
 import './header.css';
@@ -10,7 +11,7 @@ function Header() {
   return (
     <Navbar id="header" collapseOnSelect expand="md" data-bs-theme="dark">
       <Container fluid>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand as={Link} to="/">
           <div aria-label="Dannyzone dot com site branding">
             <DannyzoneLogo height="59" />
           </div>
@@ -56,7 +57,7 @@ function Header() {
                 * Denotes Login Required
               </NavDropdown.Header>
             </NavDropdown>
-            <Nav.Link href="#contact">
+            <Nav.Link as={Link} to="/contact">
               Contact
             </Nav.Link>
           </Nav>

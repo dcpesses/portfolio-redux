@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import Contact from '@/pages/contact';
 import Demo from '@/pages/demo';
 import Home from '@/pages/home';
 import NotFound from '@/pages/not-found';
@@ -11,6 +12,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/demo" element={<Demo />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
