@@ -6,7 +6,7 @@ export default function Footer() {
         <br/>
         <small>Content on this website is owned by its respective creators and is used with permission or under fair use guidelines.</small>
         <br/>
-        <small className="smaller">
+        <small className="smaller opacity-25">
           { window.lastUpdated }
         </small>
       </div>

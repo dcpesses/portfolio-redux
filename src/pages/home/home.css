@@ -2,8 +2,10 @@
 .text-gray-200 { color: #e5e7eb; }
 .text-gray-300 { color: #d1d5db; }
 .text-gray-400 { color: #9ca3af; }
+
 .hover-text-white:hover { color: #ffffff; }
-.text-cyan { color: #22d3ee; } /* cyan-400 */
+
+.text-cyan { color: #22d3ee; }
 .text-cyan:hover { text-decoration: underline; }
 
 /* Gradient text */
@@ -19,12 +21,13 @@
   stroke: #0891b2; /* cyan-600 */
 }
 
-/* Hover animation similar to translate-y-1 */
+/* Hover animation */
 .icon-hover {
-  transition: transform 0.2s ease;
+  transition: opacity 0.2s ease;
+  /* opacity: 1; */
 }
 .icon-hover:hover {
-  transform: translateY(0.25rem);
+  opacity: 0.88;
 }
 
 /* Backgrounds (e.g., project cards) */

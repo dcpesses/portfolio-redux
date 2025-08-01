@@ -1,14 +1,10 @@
 /* variables */
 :root{
   --text-primary: #fff;
+  --text-highlight-rgb: 255, 153, 255;
+  --text-highlight: rgb(var(--text-highlight-rgb));
   --bg-primary: #212529;
   --bg-secondary: #13111c;
-
-  /* component override examples */
-  --todo-text-primary: #fff!important;
-  --todo-bg-form-rgb: 153, 102, 204!important;
-  --todo-bg-item-rgb: 102, 153, 204!important;
-  --todo-bg-alpha: 0.35!important;
 }
 
 /* reset */
