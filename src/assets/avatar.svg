@@ -30,11 +30,13 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8c0 4.42 5.37 8 12 8s12-3.58 12-8" fill="#000" fill-opacity=".16"/>
         </g>
         <g transform="translate(76 90)" id="eyes">
-            <g class="open" fill="#000" fill-opacity="0.6">
-                <path d="M36 22a6 6 0 1 1-12 0 6 6 0 0 1 12 0ZM88 22a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z" />
+            <g class="right-eye" fill="#000" fill-opacity="0.6">
+                <path d="M36 22a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z" />
             </g>
-            <g class="wink" fill="#000" fill-opacity="0">
-                <path d="M36 22a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z"/>
+            <g class="left-eye open" fill="#000" fill-opacity="0.6">
+                <path d="M88 22a6 6 0 1 1-12 0 6 6 0 0 1 12 0Z" />
+            </g>
+            <g class="left-eye wink" fill="#000" fill-opacity="0">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M70.6 24.96c1.59-3.92 5.55-6.86 10.37-7.2 4.8-.33 9.12 2 11.24 5.64.63 1.09-.1 2.06-.93 1.43-2.6-1.93-6.15-3-10-2.73A15.13 15.13 0 0 0 71.95 26c-.84.78-1.81.1-1.35-1.04Z"/>
             </g>
         </g>
