@@ -16,7 +16,9 @@ const compat = new FlatCompat({
   allConfig: js.configs.all
 });
 
-export default [...fixupConfigRules(compat.extends(
+export default [{
+  ignores: ['**/node_modules', '**/dist', '**/coverage', '**/.eslintcache'],
+}, ...fixupConfigRules(compat.extends(
   'eslint:recommended',
   'plugin:@typescript-eslint/recommended',
   'plugin:react/recommended',
@@ -44,6 +46,8 @@ export default [...fixupConfigRules(compat.extends(
   },
 
   rules: {
+    '@typescript-eslint/no-unused-vars': 'error',
+
     'unused-imports/no-unused-imports': 'warn',
     'array-bracket-spacing': ['error', 'never'],
     'block-spacing': ['error', 'never'],
@@ -114,7 +118,9 @@ export default [...fixupConfigRules(compat.extends(
     'react/no-unused-state': ['error'],
     'react/no-will-update-set-state': ['error'],
     'react/prop-types': ['error'],
-    'react/require-default-props': [1],
+    'react/require-default-props': [1, {
+      functions: 'defaultArguments',
+    }],
     'react/require-render-return': ['error'],
 
     'react/self-closing-comp': ['error', {
