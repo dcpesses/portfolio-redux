@@ -1,0 +1,33 @@
+.thanks {
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.thanks .wrapper {
+  /* width: 300px;
+  height: 300px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.thanks .wrapper > * {
+  padding: 1rem;
+  margin: 0;
+}
+.thanks h1 {
+  font-size: calc(24px + 2vmin);
+}
+.thanks p {
+  font-size: calc(12px + 1vmin);
+}
+
+.thanks-link, .thanks-link:visited {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: calc(12px + 0.75vmin);
+}

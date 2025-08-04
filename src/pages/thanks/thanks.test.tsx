@@ -1,14 +1,11 @@
 import {render} from '@testing-library/react';
-import Contact from './index';
-
+import Thanks from './index';
 
 interface LinkProps {
   className: string,
   to: string,
   children: React.ReactNode
 }
-
-global.fetch = vi.fn();
 
 vi.mock('react-router-dom', () => {
   const reactRouterDom = vi.importActual('react-router-dom');
@@ -22,9 +19,9 @@ vi.mock('react-router-dom', () => {
   };
 });
 
-describe('Contact', () => {
-  test('Should render without error', () => {
-    const {container} = render(<Contact />);
-    expect(container).toBeDefined();
+describe('Thanks', () => {
+  test('Should render as expected', () => {
+    const {container} = render(<Thanks />);
+    expect(container).toMatchSnapshot();
   });
 });
