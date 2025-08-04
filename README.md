@@ -10,7 +10,19 @@
 
 Building a new portfolio from "scratch" using a [site template](https://github.com/dcpesses/vite-react-ts-gh/) I've built and maintained, based on React 19, Redux Toolkit, TypeScript, Vite 7, Vitest, React Testing Library, and GitHub Actions.
 
-[View](https://dcpesses.github.io/portfolio-redux/)
+<br/>
+
+
+
+[Preview Latest Revisions](https://dcpesses.github.io/portfolio-redux/)
+
+<br/>
+
+
+***Please Note, Site Buildout Still In Progress**
+
+![nothing-to-see-here](https://github.com/user-attachments/assets/56178049-e317-4b23-84a0-91a39f61b4c9)
+
 
 
 </div>
