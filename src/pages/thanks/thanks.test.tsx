@@ -19,6 +19,10 @@ vi.mock('react-router-dom', () => {
   };
 });
 
+vi.mock('@/components/header', () => ({
+  default: () => <div data-testid="HeaderMock" />
+}));
+
 describe('Thanks', () => {
   test('Should render as expected', () => {
     const {container} = render(<Thanks />);
