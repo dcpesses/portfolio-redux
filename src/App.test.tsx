@@ -6,11 +6,17 @@ import {mockWindowLocation} from '@/../tests/mockWindowLocation';
 
 import App from '@/App';
 
+vi.mock('@/pages/contact', () => ({
+  default: () => <div data-testid="ContactMock" />
+}));
 vi.mock('@/pages/demo', () => ({
   default: () => <div data-testid="DemoMock" />
 }));
 vi.mock('@/pages/not-found', () => ({
   default: () => <div data-testid="NotFoundMock" />
+}));
+vi.mock('@/pages/thanks', () => ({
+  default: () => <div data-testid="ThanksMock" />
 }));
 
 describe('App', () => {
@@ -32,6 +38,18 @@ describe('App', () => {
     });
   });
 
+  test('Should render Contact route', () => {
+    mockWindowLocation('http://localhost:5173/contact');
+    render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    );
+
+    expect(screen.getByTestId('ContactMock')).toBeInTheDocument();
+  });
   test('Should render Home route', () => {
     mockWindowLocation('http://localhost:5173/');
     const {container} = render(
@@ -57,7 +75,19 @@ describe('App', () => {
 
     expect(screen.getByTestId('DemoMock')).toBeInTheDocument();
   });
-  test('Should render NotFound route', () => {
+  test('Should render Thanks route', () => {
+    mockWindowLocation('http://localhost:5173/thanks');
+    render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    );
+
+    expect(screen.getByTestId('ThanksMock')).toBeInTheDocument();
+  });
+  test('Should render NotFound route for unhandled routes', () => {
     mockWindowLocation('http://localhost:5173/fubar');
     render(
       <Provider store={store}>
