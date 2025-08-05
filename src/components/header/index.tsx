@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -6,8 +9,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg?react';
 import './header.css';
 
-
 function Header() {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
   const BASE_PATH = import.meta.env.BASE_URL;
 
@@ -34,7 +42,7 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
           <Nav className="pt-3 fs-5">
-            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link onClick={handleShow}>About</Nav.Link>
             <NavDropdown title="Portfolio" id="collapsible-nav-dropdown" align="start">
               <NavDropdown.Header>
                 Warner Bros. Discovery Projects
@@ -48,7 +56,7 @@ function Header() {
               <NavDropdown.Item href="https://www.wbtvd.com/">
                 <i className="bi bi-globe text-info" /> WBTVD.com <span className="text-secondary">*</span>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#projects">
+              <NavDropdown.Item onClick={handleShow}>
                 <i className="bi bi-globe text-info" /> Show Us Your Funny
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -78,6 +86,18 @@ function Header() {
           </Nav>
         </Navbar.Collapse>
       </Container>
+      {/* temporary modal displayed during development */}
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Coming Soon!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Whoops! Looks like this site is still not quite ready yet. Please come back later.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Navbar>
   );
 }
