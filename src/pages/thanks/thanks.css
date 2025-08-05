@@ -1,33 +1,55 @@
-.thanks {
+#page-thanks {
   text-align: center;
   height: 100vh;
   position: relative;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-.thanks .wrapper {
-  /* width: 300px;
-  height: 300px; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.thanks .wrapper > * {
-  padding: 1rem;
-  margin: 0;
-}
-.thanks h1 {
-  font-size: calc(24px + 2vmin);
-}
-.thanks p {
-  font-size: calc(12px + 1vmin);
 }
 
-.thanks-link, .thanks-link:visited {
-  color: #61dafb;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: calc(12px + 0.75vmin);
+#page-thanks .thanks-icons {
+    position:relative;
+    height: 1.25em;
+    font-size: 80px;
+    line-height: 1;
+}
+
+#page-thanks .thanks-icons > div {
+    position: absolute;
+    width: 100%;
+}
+
+
+
+/* Scale Transition */
+#page-thanks .thanks-icons div.scale-in {
+    opacity: 0;
+}
+#page-thanks .scale-in {
+    animation: 0.25s linear 0.25s scale;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale3d(0.01, 0.01, 1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #page-thanks .scale-in {
+    animation-duration: 0;
+  }
+  #page-thanks #confetti {
+    display: none;
+  }
 }

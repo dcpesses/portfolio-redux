@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Thanks > Should render as expected 1`] = `
+<div>
+  <div
+    class="page-thanks"
+  >
+    <main
+      class="wrapper"
+    >
+      <h1>
+        Success
+      </h1>
+      <p>
+        Thank you for reaching out!
+      </p>
+      <div>
+        <div
+          class="thanks-link"
+          data-to="/"
+        >
+          ← Go Home
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;
