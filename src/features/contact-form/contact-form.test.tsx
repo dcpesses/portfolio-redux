@@ -19,7 +19,9 @@ vi.mock('react-router-dom', () => {
   const reactRouterDom = vi.importActual('react-router-dom');
   return {
     ...reactRouterDom,
-    redirect: vi.fn()
+    useNavigate: () => ({
+      navigate: vi.fn()
+    }),
   };
 });
 

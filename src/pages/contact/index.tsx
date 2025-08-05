@@ -16,6 +16,7 @@ function Contact() {
 
         <ContactForm
           className="px-3 fs-6 text-start"
+          redirectOnSuccess={true}
         />
 
       </div>

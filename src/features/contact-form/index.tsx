@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
-import { redirect } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { Turnstile } from '@marsidev/react-turnstile';
 import './contact-form.css';
 
@@ -25,6 +25,7 @@ function ContactForm({
   redirectOnSuccess = false,
 }) {
   const formRef = useRef(null);
+  const navigate = useNavigate();
 
   const [error, setError] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -55,7 +56,7 @@ function ContactForm({
 
   };
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async(e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     e.stopPropagation();
 
@@ -70,7 +71,8 @@ function ContactForm({
     const formData = new FormData(formRef.current);
 
     setLoading(true);
-    fetch(formProps.action, {
+
+    return await fetch(formProps.action, {
       method: 'POST',
       headers: {
         'Accept': 'application/json'
@@ -82,7 +84,7 @@ function ContactForm({
         setLoading(false);
         if (response.code === 200) {
           if (redirectOnSuccess === true) {
-            return redirect('/thanks');
+            return navigate('/thanks');
           } else {
             setSubmitted(true);
           }
@@ -104,6 +106,10 @@ function ContactForm({
   const showNotification = submitted || error;
 
   function renderStatus() {
+
+    // if (redirectOnSuccess === true) {
+    //   return redirect('/thanks');
+    // }
     const heading = error ? 'Oh Snap!' : 'Success!';
     const message = error ? `Error sending form: ${error}` : 'Your message was sent successfully. Thanks for reaching out!';
     const icon = error ? 'exclamation-triangle-fill' : 'check-circle-fill';
@@ -192,7 +198,7 @@ function ContactForm({
       <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="foo" autoComplete="off" onChange={noop} disabled={disabled} />
 
       <div className="text-center">
-        <Button type="submit" disabled={disabled}>
+        <Button type="submit" disabled={disabled} className="mb-2">
           {loading ? (
             <>
               <Spinner size="sm" animation="border" role="status" /> Sending
