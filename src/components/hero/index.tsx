@@ -1,4 +1,4 @@
-import Avatar from '@/assets/avatar.svg';
+import Avatar from '@/assets/avatar.svg?react';
 
 import './hero.css';
 

@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg';
+import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg?react';
 import './header.css';
 
 function Header() {
