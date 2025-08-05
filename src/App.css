@@ -1,7 +1,7 @@
 /* variables */
 :root{
   --text-primary: #fff;
-  --text-highlight-rgb: 255, 153, 255;
+  --text-highlight-rgb: 0, 196, 255;
   --text-highlight: rgb(var(--text-highlight-rgb));
   --bg-primary: #212529;
   --bg-secondary: #13111c;
