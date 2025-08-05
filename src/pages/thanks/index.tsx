@@ -1,14 +1,10 @@
 import Realistic from 'react-canvas-confetti/dist/presets/realistic';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-// import ThanksCheck from 'bootstrap-icons/icons/check.svg?react';
 import ThanksCheck from '@/assets/checkmark.svg?react';
-// import ThanksCircle from 'bootstrap-icons/icons/circle.svg?react';
 import ThanksCircleFill from 'bootstrap-icons/icons/circle-fill.svg?react';
-// import ThanksCheckCircleFill from 'bootstrap-icons/icons/check-circle-fill.svg?react';
+
 import './thanks.css';
-
-
 
 function Thanks() {
 
@@ -37,7 +33,9 @@ function Thanks() {
           <Realistic autorun={autorunOptions} />
         </div>
 
-        <h2 className="pt-4">Thank You!</h2>
+        <h2 className="pt-4">
+          Thank You!
+        </h2>
 
         <div className="py-3">
           Your message has been sent successfully. Thanks for reaching out!

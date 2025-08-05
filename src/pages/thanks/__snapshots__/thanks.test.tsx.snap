@@ -14,9 +14,9 @@ exports[`Thanks > Should render as expected 1`] = `
       <div
         class="container-fluid"
       >
-        <div
+        <a
           class="navbar-brand"
-          data-to="/"
+          href="/portfolio-redux/"
         >
           <div
             aria-label="Dannyzone dot com site branding"
@@ -144,7 +144,7 @@ exports[`Thanks > Should render as expected 1`] = `
               </g>
             </svg>
           </div>
-        </div>
+        </a>
         <button
           aria-controls="responsive-navbar-nav"
           aria-label="Toggle navigation"
@@ -183,12 +183,13 @@ exports[`Thanks > Should render as expected 1`] = `
                 Portfolio
               </a>
             </div>
-            <div
+            <a
               class="nav-link"
-              data-to="/contact"
+              data-rr-ui-event-key="/portfolio-redux/contact"
+              href="/portfolio-redux/contact"
             >
               Contact
-            </div>
+            </a>
           </div>
         </div>
       </div>
