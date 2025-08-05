@@ -1,6 +1,8 @@
-import {render} from '@testing-library/react';
-import Contact from './index';
+/* eslint-env jest */
+import { vi } from 'vitest';
 
+import {render} from '@testing-library/react';
+import ContactForm from './index';
 
 vi.mock(('@marsidev/react-turnstile'), async(importOriginal) => {
   const actual = await importOriginal<object>();
@@ -23,9 +25,9 @@ vi.mock('react-router-dom', () => {
   };
 });
 
-describe('Contact', () => {
+describe('ContactForm', () => {
   test('Should render without error', () => {
-    const {container} = render(<Contact />);
+    const {container} = render(<ContactForm />);
     expect(container).toBeDefined();
   });
 });

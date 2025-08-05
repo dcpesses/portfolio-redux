@@ -1,5 +1,6 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import ContactForm from '@/features/contact-form';
 
 import './contact.css';
 
@@ -13,9 +14,10 @@ function Contact() {
 
         <hr />
 
-
-        <h4 className="py-5">Coming Soon</h4>
-        {/* Form */}
+        <ContactForm
+          className="px-3 fs-6 text-start"
+          redirectOnSuccess={true}
+        />
 
       </div>
       <Footer />

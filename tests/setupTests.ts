@@ -9,7 +9,7 @@ import {
 } from './mockWindowLocation';
 
 beforeEach(() => {
-  mockWindowLocation('http://localhost:5173/portfolio-redux');
+  mockWindowLocation('http://localhost:5173/portfolio-redux/');
   mockWindowHistory();
 });
 
