@@ -1,3 +1,4 @@
+/// <reference types="vite-plugin-svgr/client" />
 /// <reference types="vitest" />
 
 import { defineConfig } from 'vite';
@@ -7,8 +8,8 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/portfolio-redux',
-  plugins: [react(), svgr(), tsconfigPaths()],
+  base: '/portfolio-redux/',
+  plugins: [react(), svgr({ include: '**/*.svg' }), tsconfigPaths()],
   build: {
     sourcemap: true,
   },

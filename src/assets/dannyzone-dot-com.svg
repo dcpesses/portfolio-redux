@@ -3,11 +3,6 @@
     <filter id="filter-dannyzone" filterUnits="userSpaceOnUse">
       <feDropShadow dx="0" dy="0" stdDeviation="1.618" flood-color="#ffffc0" flood-opacity="1" />
       <feDropShadow dx="1" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="1" />
-      <!-- <feDropShadow dx="0" dy="0" stdDeviation="1.618" flood-color="rgba(255,255,192,1)" flood-opacity="0.5" />
-      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="rgba(255,255,255,1)" /> -->
-
-      <!-- <feDropShadow dx="0" dy="0" stdDeviation="1" flood-color="rgba(255,255,128,0.75)" />
-      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="rgba(255,255,128,0.75)" /> -->
     </filter>
     <filter id="filter-dot_com" filterUnits="userSpaceOnUse">
       <feDropShadow dx="0.88" dy="0.88" stdDeviation="0.88" flood-color="#000" flood-opacity="0.33" />

@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 
-import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg?react';
+import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg';
 import './header.css';
 
 function Header() {
