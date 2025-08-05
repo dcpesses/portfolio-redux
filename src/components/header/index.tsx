@@ -6,11 +6,27 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg?react';
 import './header.css';
 
+
 function Header() {
+
+  const BASE_PATH = import.meta.env.BASE_URL;
+
+  // normalize relative paths
+  const navUrl = (path:string) => {
+    let base = BASE_PATH;
+    // remove trailing slash when configured
+    if (base.endsWith('/')) {
+      base = base.substring(0, base.length-1);
+    }
+    const relUrl = `${base}${path}`;
+    // window.console.log({base, relUrl});
+    return relUrl;
+  };
+
   return (
     <Navbar id="header" collapseOnSelect expand="md" data-bs-theme="dark">
       <Container fluid>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href={ navUrl('/') }>
           <div aria-label="Dannyzone dot com site branding">
             <DannyzoneLogo height="59" />
           </div>
@@ -56,7 +72,7 @@ function Header() {
                 * Denotes Login Required
               </NavDropdown.Header>
             </NavDropdown>
-            <Nav.Link href="/contact">
+            <Nav.Link href={ navUrl('/contact') }>
               Contact
             </Nav.Link>
           </Nav>
