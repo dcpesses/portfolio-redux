@@ -1,14 +1,8 @@
+/* eslint-env jest */
+import { vi } from 'vitest';
+
 import {render} from '@testing-library/react';
-import Contact from './index';
-
-
-interface LinkProps {
-  className: string,
-  to: string,
-  children: React.ReactNode
-}
-
-global.fetch = vi.fn();
+import ContactForm from './index';
 
 vi.mock(('@marsidev/react-turnstile'), async(importOriginal) => {
   const actual = await importOriginal<object>();
@@ -25,18 +19,13 @@ vi.mock('react-router-dom', () => {
   const reactRouterDom = vi.importActual('react-router-dom');
   return {
     ...reactRouterDom,
-    Link: ({className, to, children}: LinkProps) => (
-      <div className={className} data-to={to}>
-        {children}
-      </div>
-    ),
     redirect: vi.fn()
   };
 });
 
-describe('Contact', () => {
+describe('ContactForm', () => {
   test('Should render without error', () => {
-    const {container} = render(<Contact />);
+    const {container} = render(<ContactForm />);
     expect(container).toBeDefined();
   });
 });
