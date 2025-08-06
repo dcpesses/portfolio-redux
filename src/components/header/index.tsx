@@ -6,6 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import { Link, NavLink } from 'react-router';
+
 import DannyzoneLogo from '@/assets/dannyzone-dot-com.svg?react';
 import './header.css';
 
@@ -16,28 +18,11 @@ function Header() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
-  const BASE_PATH = import.meta.env.BASE_URL;
-
-  // normalize relative paths
-  const navUrl = (path:string) => {
-    let base = BASE_PATH;
-    // remove trailing slash when configured
-    if (base.endsWith('/')) {
-      base = base.substring(0, base.length-1);
-    }
-    const relUrl = `${base}${path}`;
-    // window.console.log({base, relUrl});
-    return relUrl;
-  };
-
   return (
     <Navbar id="header" collapseOnSelect expand="sm" data-bs-theme="dark">
       <Container fluid className="flex-column nav-stack">
-        <Navbar.Brand href={ navUrl('/') } className="flex-grow-">
-          <div>
-            <DannyzoneLogo className="dannyzone-logo" aria-label="Dannyzone dot com site branding" />
-          </div>
+        <Navbar.Brand as={Link} to={ '/' }>
+          <DannyzoneLogo className="dannyzone-logo" aria-label="Dannyzone dot com site branding" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center justify-content-md-end">
@@ -80,7 +65,7 @@ function Header() {
                 * Denotes Login Required
               </NavDropdown.Header>
             </NavDropdown>
-            <Nav.Link href={ navUrl('/contact') }>
+            <Nav.Link as={NavLink} to={'/contact'}>
               Contact
             </Nav.Link>
           </Nav>
