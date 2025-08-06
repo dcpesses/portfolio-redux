@@ -1,15 +1,60 @@
-<svg width="410" height="404" viewBox="0 0 410 404" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M399.641 59.5246L215.643 388.545C211.844 395.338 202.084 395.378 198.228 388.618L10.5817 59.5563C6.38087 52.1896 12.6802 43.2665 21.0281 44.7586L205.223 77.6824C206.398 77.8924 207.601 77.8904 208.776 77.6763L389.119 44.8058C397.439 43.2894 403.768 52.1434 399.641 59.5246Z" fill="url(#paint0_linear)"/>
-<path d="M292.965 1.5744L156.801 28.2552C154.563 28.6937 152.906 30.5903 152.771 32.8664L144.395 174.33C144.198 177.662 147.258 180.248 150.51 179.498L188.42 170.749C191.967 169.931 195.172 173.055 194.443 176.622L183.18 231.775C182.422 235.487 185.907 238.661 189.532 237.56L212.947 230.446C216.577 229.344 220.065 232.527 219.297 236.242L201.398 322.875C200.278 328.294 207.486 331.249 210.492 326.603L212.5 323.5L323.454 102.072C325.312 98.3645 322.108 94.137 318.036 94.9228L279.014 102.454C275.347 103.161 272.227 99.746 273.262 96.1583L298.731 7.86689C299.767 4.27314 296.636 0.855181 292.965 1.5744Z" fill="url(#paint1_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="6.00017" y1="32.9999" x2="235" y2="344" gradientUnits="userSpaceOnUse">
-<stop stop-color="#41D1FF"/>
-<stop offset="1" stop-color="#BD34FE"/>
-</linearGradient>
-<linearGradient id="paint1_linear" x1="194.651" y1="8.81818" x2="236.076" y2="292.989" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFEA83"/>
-<stop offset="0.0833333" stop-color="#FFDD35"/>
-<stop offset="1" stop-color="#FFA800"/>
-</linearGradient>
-</defs>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+  <radialGradient id="blueBg">
+    <stop offset="95%" stop-color="#0044DD" />
+    <stop offset="100%" stop-color="#012483" />
+  </radialGradient>
+  <filter id="inner-shadow" color-interpolation-filters="linearRGB" filterUnits="objectBoundingBox"
+    primitiveUnits="userSpaceOnUse">
+    <feFlood flood-color="#000000" flood-opacity="0.75" result="flood" />
+    <feComposite in="flood" in2="SourceAlpha" operator="out" result="composite1" />
+    <feOffset dx="-2" dy="2" in="composite1" result="offset" />
+    <feGaussianBlur stdDeviation="3 3" in="offset" edgeMode="none" result="blur" />
+    <feComposite in="blur" in2="SourceAlpha" operator="in" result="composite2" />
+    <feMerge result="merge">
+      <feMergeNode in="SourceGraphic" />
+      <feMergeNode in="composite2" />
+    </feMerge>
+  </filter>
+  <filter id="inner-bevel" x0="-50%" y0="-50%" width="200%" height="200%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="25" result="blur" />
+    <feOffset dy="10" dx="10" />
+    <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="hlDiff" />
+    <feFlood flood-color="#ACF" flood-opacity="1" />
+    <feComposite in2="hlDiff" operator="in" />
+    <feComposite in2="SourceGraphic" operator="over" result="withGlow" />
+
+    <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+    <feOffset dy="10" dx="10" />
+    <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="spDiff" />
+    <feFlood flood-color="#ACF" flood-opacity="0.5" />
+    <feComposite in2="spDiff" operator="in" />
+    <feComposite in2="withGlow" operator="over" result="withSpecularGlow" />
+
+    <feOffset in="blur" dy="-25" dx="-25" />
+    <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff" />
+    <feFlood flood-color="#001122" flood-opacity="1" />
+    <feComposite in2="shadowDiff" operator="in" />
+    <feComposite in2="withSpecularGlow" operator="over" />
+  </filter>
+  <g id="background" filter="url(#inner-bevel)">
+    <circle fill-rule="evenodd" clip-rule="evenodd" fill="url('#blueBg')" cx="200" cy="200" r="198" />
+  </g>
+  <g id="glyphs" filter="url(#inner-shadow)">
+    <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF"
+      d="M227.631,93.483c5.308-4.366,9.743-7.491,13.304-9.376
+    		c8.905-4.505,17.81-7.019,26.715-7.542c19.904-1.153,36.457,5.813,49.657,20.899c12.991,14.981,19.538,34.152,19.644,57.514
+    		c0.104,23.362-5.814,43.529-17.758,60.5c-13.514,18.963-31.742,28.496-54.686,28.601c-6.286,0.105-12.99-1.152-20.113-3.771
+    		c-5.938-2.095-11.524-5.272-16.763-9.533c0-0.035-0.018-0.053-0.053-0.053c-0.069-0.069-0.14-0.121-0.209-0.157l-4.977-3.876
+    		v90.305h-44.786v-14.718l-5.081,4.137c-0.035,0-0.069,0.018-0.105,0.054l-0.051,0.052c-5.204,4.364-9.638,7.49-13.305,9.376
+    		c-8.905,4.505-17.81,7.019-26.714,7.542c-19.905,1.153-36.457-5.813-49.658-20.898c-12.886-14.982-19.433-34.153-19.643-57.515
+    		c-0.105-23.362,5.815-43.529,17.757-60.501c13.515-18.962,31.795-28.496,54.843-28.6c6.077,0,12.677,1.205,19.8,3.614
+    		c0.105,0.105,0.209,0.157,0.314,0.157c5.833,2.095,11.367,5.273,16.605,9.533l0.051,0.053h0.053l5.133,3.98V83.164h44.786v14.562
+    		l5.133-4.085l0.053-0.105C227.613,93.535,227.631,93.518,227.631,93.483z M224.488,127.636l-2.096,1.571v68.881l2.096,1.101
+    		c3.457,1.781,6.896,3.283,10.318,4.505c5.762,2.2,12.31,3.248,19.644,3.143c11.104-0.104,20.008-4.767,26.714-13.986
+    		c6.181-8.485,9.271-19.434,9.271-32.843c0-12.886-3.037-23.257-9.113-31.114c-6.286-8.695-14.981-13.042-26.086-13.042
+    		c-5.238,0-11.104,1.519-17.6,4.556C232.781,122.572,228.399,124.981,224.488,127.636z M144.764,284.15
+    		c5.344,0,11.262-1.519,17.757-4.557c4.89-2.34,9.219-4.767,12.991-7.281l2.095-1.571v-68.829l-2.095-1.048
+    		c-3.422-1.816-6.862-3.335-10.319-4.558c-5.762-2.2-12.31-3.248-19.643-3.143c-11.104,0.104-19.958,4.767-26.557,13.986
+    		c-6.286,8.486-9.429,19.434-9.429,32.844c0,12.885,3.038,23.257,9.115,31.113C124.965,279.803,133.66,284.15,144.764,284.15z" />
+  </g>
 </svg>
