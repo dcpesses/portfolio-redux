@@ -15,8 +15,8 @@ vi.mock(('@marsidev/react-turnstile'), async(importOriginal) => {
   };
 });
 
-vi.mock('react-router-dom', () => {
-  const reactRouterDom = vi.importActual('react-router-dom');
+vi.mock('react-router', () => {
+  const reactRouterDom = vi.importActual('react-router');
   return {
     ...reactRouterDom,
     useNavigate: () => ({

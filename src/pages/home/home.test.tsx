@@ -7,8 +7,8 @@ interface LinkProps {
   children: React.ReactNode
 }
 
-vi.mock('react-router-dom', () => {
-  const reactRouterDom = vi.importActual('react-router-dom');
+vi.mock('react-router', () => {
+  const reactRouterDom = vi.importActual('react-router');
   return {
     ...reactRouterDom,
     Link: ({className, to, children}: LinkProps) => (
