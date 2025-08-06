@@ -33,15 +33,15 @@ function Header() {
 
   return (
     <Navbar id="header" collapseOnSelect expand="md" data-bs-theme="dark">
-      <Container fluid>
-        <Navbar.Brand href={ navUrl('/') }>
-          <div aria-label="Dannyzone dot com site branding">
-            <DannyzoneLogo height="59" />
+      <Container fluid className="flex-nowrap">
+        <Navbar.Brand href={ navUrl('/') } className="flex-grow-">
+          <div>
+            <DannyzoneLogo className="dannyzone-logo" aria-label="Dannyzone dot com site branding" />
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-          <Nav className="pt-3 fs-5">
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center justify-content-md-end">
+          <Nav className="pt-3 fs-5 text-center text-md-end">
             <Nav.Link onClick={handleShow}>About</Nav.Link>
             <NavDropdown title="Portfolio" id="collapsible-nav-dropdown" align="start">
               <NavDropdown.Header>

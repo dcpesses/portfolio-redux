@@ -20,19 +20,36 @@
     border-left: .15em solid transparent;
 }
 
-#header svg #dannyzone_dot_com #dot_com {
+
+#header svg.dannyzone-logo {
+  max-height: 59px;
+  height: auto;
+  width: 100%;
+}
+#header svg.dannyzone-logo #dannyzone_dot_com #dot_com {
   fill: rgb(var(--text-highlight-rgb));
   stroke: rgb(var(--text-highlight-rgb));
   transition: stroke-width 0.2s ease;
 }
-#header svg:hover #dannyzone_dot_com #dot_com {
+#header svg.dannyzone-logo:hover #dannyzone_dot_com #dot_com {
   stroke-width: 0.33;
 }
-#header svg #dannyzone_dot_com #dot_com {
+#header svg.dannyzone-logo #dannyzone_dot_com #dot_com {
   fill: rgb(var(--text-highlight-rgb));
   stroke: rgb(var(--text-highlight-rgb));
   transition: stroke-width 0.2s ease;
 }
-#header svg:hover #dannyzone_dot_com #dot_com {
+#header svg.dannyzone-logo:hover #dannyzone_dot_com #dot_com {
   stroke-width: 0.33;
+}
+
+
+@media (max-width: 575.98px) {
+
+}
+@media (max-width: 447.98px) {
+
+}
+@media (max-width: 359.98px) {
+
 }
