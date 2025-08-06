@@ -1,4 +1,5 @@
 import {render} from '@testing-library/react';
+import {LinkProps, NavLinkProps, PropsWithChildren} from '@/../tests/mockReactRouterHelper';
 import Contact from './index';
 
 
@@ -14,10 +15,22 @@ vi.mock(('@marsidev/react-turnstile'), async(importOriginal) => {
 });
 
 vi.mock('react-router', () => {
-  const reactRouterDom = vi.importActual('react-router');
+  const reactRouter = vi.importActual('react-router');
   return {
-    ...reactRouterDom,
-    useNavigate: () => ({
+    ...reactRouter,
+    Link: ({children, to, ...props}: LinkProps) => (
+      <a href={to.toString()} {...props}>
+        {children}
+      </a>
+    ),
+    NavLink({children = null, to, ...props}: PropsWithChildren<Omit<NavLinkProps, 'className' | 'style'>>) {
+      return (
+        <a href={to.toString()} {...props}>
+          {children}
+        </a>
+      );
+    },
+    useNavigate: vi.fn().mockReturnValue({
       navigate: vi.fn()
     }),
   };

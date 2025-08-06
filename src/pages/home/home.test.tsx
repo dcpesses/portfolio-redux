@@ -1,21 +1,23 @@
 import {render} from '@testing-library/react';
+import {LinkProps, NavLinkProps, PropsWithChildren} from '@/../tests/mockReactRouterHelper';
 import Home from './index';
 
-interface LinkProps {
-  className: string,
-  to: string,
-  children: React.ReactNode
-}
-
 vi.mock('react-router', () => {
-  const reactRouterDom = vi.importActual('react-router');
+  const reactRouter = vi.importActual('react-router');
   return {
-    ...reactRouterDom,
-    Link: ({className, to, children}: LinkProps) => (
-      <div className={className} data-to={to}>
+    ...reactRouter,
+    Link: ({children, to, ...props}: LinkProps) => (
+      <a href={to.toString()} {...props}>
         {children}
-      </div>
-    )
+      </a>
+    ),
+    NavLink({children = null, to, ...props}: PropsWithChildren<Omit<NavLinkProps, 'className' | 'style'>>) {
+      return (
+        <a href={to.toString()} {...props}>
+          {children}
+        </a>
+      );
+    },
   };
 });
 
