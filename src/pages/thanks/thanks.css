@@ -1,0 +1,55 @@
+#page-thanks {
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+
+#page-thanks .thanks-icons {
+    position:relative;
+    height: 1.25em;
+    font-size: 80px;
+    line-height: 1;
+}
+
+#page-thanks .thanks-icons > div {
+    position: absolute;
+    width: 100%;
+}
+
+
+
+/* Scale Transition */
+#page-thanks .thanks-icons div.scale-in {
+    opacity: 0;
+}
+#page-thanks .scale-in {
+    animation: 0.25s linear 0.25s scale;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale3d(0.01, 0.01, 1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #page-thanks .scale-in {
+    animation-duration: 0;
+  }
+  #page-thanks #confetti {
+    display: none;
+  }
+}

@@ -1,0 +1,96 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Thanks > Should render as expected 1`] = `
+<div>
+  <div
+    class="container px-3"
+    id="page-thanks"
+  >
+    <div
+      data-testid="HeaderMock"
+    />
+    <div
+      class="text-center"
+    >
+      <div
+        class="thanks-icons"
+      >
+        <div
+          class="thanks-circle"
+        >
+          <svg
+            class="text-success"
+            fill="currentColor"
+            height="96px"
+            viewBox="0 0 16 16"
+            width="96px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="8"
+              cy="8"
+              r="8"
+            />
+          </svg>
+        </div>
+        <div
+          class="thanks-checkmark scale-in"
+        >
+          <svg
+            class="text-light"
+            height="96px"
+            viewBox="0 0 190 190"
+            width="96px"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <path
+                d="m 52.8,93.897004 c 3.35,0 5.88,2.749996 7.6,8.249996 3.43,10.3 5.88,15.45 7.34,15.45 1.11,0 2.27,-0.86 3.47,-2.58 C 95.34,76.387 117.66,45.138001 138.18,21.272 143.5,15.091001 151.96,12 163.55,12 c 2.74,0 4.59,0.258 5.53,0.773 0.95,0.515 1.42,1.159 1.42,1.931 0,1.202 -1.42,3.563001 -4.25,7.083001 C 133.11,61.622 102.38,103.687 74.05,147.987 c -1.98,3.09 -6.01,4.64 -12.11,4.64 -6.18,0 -9.83,-0.26 -10.94,-0.78 -2.92,-1.28 -6.36,-7.85 -10.31,-19.7 -4.46,-13.13 -6.69,-21.38 -6.69,-24.72 0,-3.61 3,-7.09 9.01,-10.44 3.69,-2.059997 6.96,-3.089997 9.79,-3.089997"
+                id="check"
+                style="display: inline; fill: currentColor;"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div
+        id="confetti"
+      >
+        <canvas
+          style="position: fixed; pointer-events: none; width: 100%; height: 100%; top: 0px; left: 0px;"
+        />
+      </div>
+      <h2
+        class="pt-4"
+      >
+        Thank You!
+      </h2>
+      <div
+        class="py-3"
+      >
+        Your message has been sent successfully. Thanks for reaching out!
+      </div>
+    </div>
+    <footer
+      class="container py-4 px-3"
+    >
+      <div
+        class="border-top border-gray-600 pt-3 text-center small"
+      >
+        <small>
+          © 2025 DannyZone.com. All rights reserved.
+        </small>
+        <br />
+        <small>
+          Content on this website is owned by its respective creators and is used with permission or under fair use guidelines.
+        </small>
+        <br />
+        <small
+          class="smaller opacity-25"
+        />
+      </div>
+    </footer>
+  </div>
+</div>
+`;

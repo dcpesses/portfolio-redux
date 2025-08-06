@@ -1,0 +1,41 @@
+#hero #hero-avatar {
+  height: 320px;
+  width: 256px;
+}
+#hero svg#hero-avatar:hover #eyes .open,
+#hero svg#hero-avatar:hover #eyes .wink {
+  animation-duration: 0.125s;
+  animation-delay: 1.25s;
+  animation-iteration-count: 1;
+}
+#hero svg#hero-avatar:hover #eyes .open { animation-name: animOpen; }
+#hero svg#hero-avatar:hover #eyes .wink { animation-name: animWink; }
+
+@keyframes animOpen {
+  0% { fill-opacity: 0.6; }
+  0.01% { fill-opacity: 0; }
+  99.9% { fill-opacity: 0; }
+  100% { fill-opacity: 0.6; }
+}
+@keyframes animWink {
+  0% { fill-opacity: 0; }
+  0.01% { fill-opacity: 0.6; }
+  99.9% { fill-opacity: 0.6; }
+  100% { fill-opacity: 0; }
+}
+
+/* currently unused */
+.instagram-icon {
+  border-radius: 10px; /* Optional: for a rounded square shape */
+  background: linear-gradient(
+    45deg,
+    #f09433 0%, /* Light yellow/orange */
+    #e6683c 25%, /* Orange */
+    #dc2743 50%, /* Red */
+    #cc2366 75%, /* Pink/Purple */
+    #bc1888 100% /* Dark purple */
+  );
+  /* Optional: For older browser compatibility */
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
