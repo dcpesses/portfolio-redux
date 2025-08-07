@@ -20,12 +20,12 @@ export default function Hero() {
 
   return (
     <section id="hero" className="container py-4 px-3">
-      <div className="d-flex flex-column align-items-center flex-md-row justify-content-md-between gap-4">
+      <div className="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between gap-4">
         <div>
           <h1 className="h3 fw-bold">
-            Hi there, I&lsquo;m <span className="gradient-text">Danny Pesses</span> 👋
+            Hi there, <div className="d-inline-block">I&lsquo;m <span className="gradient-text">Danny Pesses</span> 👋</div>
           </h1>
-          <p className="mt-4 fs-5 lh-base">
+          <p className="mt-4 fs-6 fs-md-5 lh-base">
             A passionate senior web developer from Los Angeles specializing in crafting innovative web applications using ReactJS, Node.js, and modern development practices.
             <a href="#" className="text-cyan hover-underline"></a>
           </p>
@@ -37,7 +37,6 @@ export default function Hero() {
           <Avatar
             id="hero-avatar"
             className="img-fluid"
-            style={{ height: '320px', width: '256px' }}
             data-label="Avatar of Danny Pesses"
           />
         </div>

@@ -20,13 +20,13 @@ function Header() {
 
   return (
     <Navbar id="header" collapseOnSelect expand="sm" data-bs-theme="dark">
-      <Container fluid className="flex-column nav-stack">
+      <Container fluid>
         <Navbar.Brand as={Link} to={ '/' }>
           <DannyzoneLogo className="dannyzone-logo" aria-label="Dannyzone dot com site branding" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center justify-content-md-end">
-          <Nav className="pt-3 fs-5 text-center text-md-end">
+          <Nav className="pt-md-3 fs-md-5 text-center text-md-end">
             <Nav.Link onClick={handleShow}>About</Nav.Link>
             <NavDropdown title="Portfolio" id="collapsible-nav-dropdown" align="start">
               <NavDropdown.Header>

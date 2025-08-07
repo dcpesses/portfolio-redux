@@ -28,8 +28,14 @@ button {
   cursor: pointer;
 }
 
+small, .small {
+  font-size: 0.875em;
+  line-height: 1.125;
+}
+
 .smaller {
   font-size: 11px;
+  line-height: 1;
 }
 
 /* Site wide styles */
@@ -40,6 +46,7 @@ button {
 }
 
 @media (max-width: 447.98px) {
+
   .page {
     padding-right: 0.5rem !important;
     padding-left: 0.5rem !important;
@@ -65,4 +72,15 @@ button {
   /* html {font-size: 50%;}
   .smaller {font-size: 6px;}
   .d-xss-inline {display:none!important;} */
+}
+
+
+
+@media (min-width: 576px) {
+  .fs-sm-5 { font-size: 1.25rem !important; }
+  .fs-sm-6 { font-size: 1rem !important; }
+}
+@media (min-width: 768px) {
+  .fs-md-5 { font-size: 1.25rem !important; }
+  .fs-md-6 { font-size: 1rem !important; }
 }
