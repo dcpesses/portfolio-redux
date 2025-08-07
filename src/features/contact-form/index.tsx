@@ -9,8 +9,10 @@ import { useNavigate } from 'react-router';
 import { Turnstile } from '@marsidev/react-turnstile';
 import './contact-form.css';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars, @typescript-eslint/no-explicit-any
-const noop = (_e: any) => {};
+// eslint-disable-next-line
+const noop = (_e: React.ChangeEvent<HTMLInputElement>) => {};
+
+const TURNSTYLE_SITE_KEY = '0x4AAAAAABnorjomER4bbtKv';
 
 interface FormProps {
   action: string;
@@ -21,9 +23,9 @@ interface FormProps {
 
 function ContactForm({
   className = '',
-  disabled = false,
   redirectOnSuccess = false,
 }) {
+  const disabled = false;
   const formRef = useRef(null);
   const navigate = useNavigate();
 
@@ -44,7 +46,6 @@ function ContactForm({
     setError('');
   };
 
-
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     const form:HTMLFormElement = event.currentTarget as HTMLFormElement;
     setValidated(true);
@@ -53,7 +54,6 @@ function ContactForm({
     if (form.checkValidity() !== false) {
       onSubmit(event);
     }
-
   };
 
   const onSubmit = async(e: FormEvent<HTMLFormElement>) => {
@@ -62,13 +62,13 @@ function ContactForm({
 
     resetStates();
 
-    if (!formRef.current) {
-      console.warn('something wrong with form ref');
-      setError('Sorry, your message cannot be sent right now. Please try again later.');
-      return;
-    }
+    // if (!formRef.current) {
+    //   console.warn('something wrong with form ref');
+    //   setError('Sorry, your message cannot be sent right now. Please try again later.');
+    //   return;
+    // }
 
-    const formData = new FormData(formRef.current);
+    const formData = new FormData(formRef.current!);
 
     setLoading(true);
 
@@ -178,6 +178,7 @@ function ContactForm({
             required
             as="textarea"
             name="message"
+            placeholder="Enter your message here..."
             disabled={disabled}
           />
           <Form.Control.Feedback type="invalid">
@@ -187,7 +188,7 @@ function ContactForm({
       </Row>
 
       <div className="text-center">
-        <Turnstile siteKey="0x4AAAAAABnorjomER4bbtKv" />
+        <Turnstile siteKey={TURNSTYLE_SITE_KEY} />
       </div>
 
       <div style={{opacity:0, position:'absolute', top:0, left:'-5000px', height:0, width:0}}>
@@ -195,7 +196,7 @@ function ContactForm({
         <input name="subscribe_a7fdfc1ea41e_48062" value="" tabIndex={-1} autoComplete="off"
           type="email" id="email_subscribe_a7fdfc1ea41e_48062" placeholder="Your email here" onChange={noop} disabled={disabled} />
       </div>
-      <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="foo" autoComplete="off" onChange={noop} disabled={disabled} />
+      <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="" autoComplete="off" onChange={noop} disabled={disabled} />
 
       <div className="text-center">
         <Button type="submit" disabled={disabled} className="mb-2">
@@ -217,7 +218,6 @@ function ContactForm({
 
 ContactForm.propTypes = {
   className: PropTypes.string,
-  disabled: PropTypes.bool,
   redirectOnSuccess: PropTypes.bool,
 };
 

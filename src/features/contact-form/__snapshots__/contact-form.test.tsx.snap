@@ -1,0 +1,561 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContactForm > Should display alert message on caught errors > pristine 1`] = `
+<form
+  class=""
+  data-testid="contact-form"
+  id="contact-form"
+  novalidate=""
+>
+  <div
+    class="pb-3 row"
+  >
+    <div
+      class="col-sm-6"
+    >
+      <label
+        class="form-label"
+        for="contact.Full_Name"
+      >
+        Full Name 
+        <span>
+          *
+        </span>
+      </label>
+      <input
+        class="form-control"
+        id="contact.Full_Name"
+        name="name"
+        placeholder="First and Last Name"
+        required=""
+        type="text"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter your full name
+      </div>
+    </div>
+    <div
+      class="col-sm-6"
+    >
+      <label
+        class="form-label"
+        for="contact.Email_Address"
+      >
+        Email Address 
+        <span>
+          *
+        </span>
+      </label>
+      <input
+        class="form-control"
+        id="contact.Email_Address"
+        name="Email Address"
+        placeholder="your@email.com"
+        required=""
+        type="email"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter a valid email address
+      </div>
+    </div>
+  </div>
+  <div
+    class="pb-3 row"
+  >
+    <div>
+      <label
+        class="form-label"
+        for="contact.Message"
+      >
+        Message 
+        <span>
+          *
+        </span>
+      </label>
+      <textarea
+        class="form-control"
+        id="contact.Message"
+        name="message"
+        placeholder="Enter your message here..."
+        required=""
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter your message.
+      </div>
+    </div>
+  </div>
+  <div
+    class="text-center"
+  >
+    <div
+      data-testid="mock-turnstile"
+    />
+  </div>
+  <div
+    style="opacity: 0; position: absolute; top: 0px; left: -5000px; height: 0px; width: 0px;"
+  >
+    <label
+      for="subscribe_a7fdfc1ea41e_48062"
+    />
+    <input
+      autocomplete="off"
+      id="email_subscribe_a7fdfc1ea41e_48062"
+      name="subscribe_a7fdfc1ea41e_48062"
+      placeholder="Your email here"
+      tabindex="-1"
+      type="email"
+      value=""
+    />
+  </div>
+  <input
+    autocomplete="off"
+    id="g-recaptcha-response"
+    name="g-recaptcha-response"
+    type="hidden"
+    value=""
+  />
+  <div
+    class="text-center"
+  >
+    <button
+      class="mb-2 btn btn-primary"
+      type="submit"
+    >
+      Send Message
+    </button>
+  </div>
+</form>
+`;
+
+exports[`ContactForm > Should submit and display alert message on form submission errors > pristine 1`] = `
+<form
+  class=""
+  data-testid="contact-form"
+  id="contact-form"
+  novalidate=""
+>
+  <div
+    class="pb-3 row"
+  >
+    <div
+      class="col-sm-6"
+    >
+      <label
+        class="form-label"
+        for="contact.Full_Name"
+      >
+        Full Name 
+        <span>
+          *
+        </span>
+      </label>
+      <input
+        class="form-control"
+        id="contact.Full_Name"
+        name="name"
+        placeholder="First and Last Name"
+        required=""
+        type="text"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter your full name
+      </div>
+    </div>
+    <div
+      class="col-sm-6"
+    >
+      <label
+        class="form-label"
+        for="contact.Email_Address"
+      >
+        Email Address 
+        <span>
+          *
+        </span>
+      </label>
+      <input
+        class="form-control"
+        id="contact.Email_Address"
+        name="Email Address"
+        placeholder="your@email.com"
+        required=""
+        type="email"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter a valid email address
+      </div>
+    </div>
+  </div>
+  <div
+    class="pb-3 row"
+  >
+    <div>
+      <label
+        class="form-label"
+        for="contact.Message"
+      >
+        Message 
+        <span>
+          *
+        </span>
+      </label>
+      <textarea
+        class="form-control"
+        id="contact.Message"
+        name="message"
+        placeholder="Enter your message here..."
+        required=""
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter your message.
+      </div>
+    </div>
+  </div>
+  <div
+    class="text-center"
+  >
+    <div
+      data-testid="mock-turnstile"
+    />
+  </div>
+  <div
+    style="opacity: 0; position: absolute; top: 0px; left: -5000px; height: 0px; width: 0px;"
+  >
+    <label
+      for="subscribe_a7fdfc1ea41e_48062"
+    />
+    <input
+      autocomplete="off"
+      id="email_subscribe_a7fdfc1ea41e_48062"
+      name="subscribe_a7fdfc1ea41e_48062"
+      placeholder="Your email here"
+      tabindex="-1"
+      type="email"
+      value=""
+    />
+  </div>
+  <input
+    autocomplete="off"
+    id="g-recaptcha-response"
+    name="g-recaptcha-response"
+    type="hidden"
+    value=""
+  />
+  <div
+    class="text-center"
+  >
+    <button
+      class="mb-2 btn btn-primary"
+      type="submit"
+    >
+      Send Message
+    </button>
+  </div>
+</form>
+`;
+
+exports[`ContactForm > Should submit and display notification when form has valid data > dirty 1`] = `
+<form
+  class="was-validated"
+  data-testid="contact-form"
+  id="contact-form"
+  novalidate=""
+>
+  <div
+    class="pb-3 row"
+  >
+    <div
+      class="col-sm-6"
+    >
+      <label
+        class="form-label"
+        for="contact.Full_Name"
+      >
+        Full Name 
+        <span>
+          *
+        </span>
+      </label>
+      <input
+        class="form-control"
+        id="contact.Full_Name"
+        name="name"
+        placeholder="First and Last Name"
+        required=""
+        type="text"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter your full name
+      </div>
+    </div>
+    <div
+      class="col-sm-6"
+    >
+      <label
+        class="form-label"
+        for="contact.Email_Address"
+      >
+        Email Address 
+        <span>
+          *
+        </span>
+      </label>
+      <input
+        class="form-control"
+        id="contact.Email_Address"
+        name="Email Address"
+        placeholder="your@email.com"
+        required=""
+        type="email"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter a valid email address
+      </div>
+    </div>
+  </div>
+  <div
+    class="pb-3 row"
+  >
+    <div>
+      <label
+        class="form-label"
+        for="contact.Message"
+      >
+        Message 
+        <span>
+          *
+        </span>
+      </label>
+      <textarea
+        class="form-control"
+        id="contact.Message"
+        name="message"
+        placeholder="Enter your message here..."
+        required=""
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter your message.
+      </div>
+    </div>
+  </div>
+  <div
+    class="text-center"
+  >
+    <div
+      data-testid="mock-turnstile"
+    />
+  </div>
+  <div
+    style="opacity: 0; position: absolute; top: 0px; left: -5000px; height: 0px; width: 0px;"
+  >
+    <label
+      for="subscribe_a7fdfc1ea41e_48062"
+    />
+    <input
+      autocomplete="off"
+      id="email_subscribe_a7fdfc1ea41e_48062"
+      name="subscribe_a7fdfc1ea41e_48062"
+      placeholder="Your email here"
+      tabindex="-1"
+      type="email"
+      value=""
+    />
+  </div>
+  <input
+    autocomplete="off"
+    id="g-recaptcha-response"
+    name="g-recaptcha-response"
+    type="hidden"
+    value=""
+  />
+  <div
+    class="text-center"
+  >
+    <button
+      class="mb-2 btn btn-primary"
+      type="submit"
+    >
+      Send Message
+    </button>
+    <div
+      class="form-notification"
+    >
+      <div
+        class="fade alert alert-success alert-dismissible show"
+        role="alert"
+      >
+        <button
+          aria-label="Close alert"
+          class="btn-close"
+          type="button"
+        />
+        <div
+          class="alert-heading h4"
+        >
+          <i
+            class="bi bi-check-circle-fill"
+          />
+           
+          Success!
+        </div>
+        <div
+          class="alert-content"
+        >
+          Your message was sent successfully. Thanks for reaching out!
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`ContactForm > Should submit and display notification when form has valid data > pristine 1`] = `
+<form
+  class=""
+  data-testid="contact-form"
+  id="contact-form"
+  novalidate=""
+>
+  <div
+    class="pb-3 row"
+  >
+    <div
+      class="col-sm-6"
+    >
+      <label
+        class="form-label"
+        for="contact.Full_Name"
+      >
+        Full Name 
+        <span>
+          *
+        </span>
+      </label>
+      <input
+        class="form-control"
+        id="contact.Full_Name"
+        name="name"
+        placeholder="First and Last Name"
+        required=""
+        type="text"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter your full name
+      </div>
+    </div>
+    <div
+      class="col-sm-6"
+    >
+      <label
+        class="form-label"
+        for="contact.Email_Address"
+      >
+        Email Address 
+        <span>
+          *
+        </span>
+      </label>
+      <input
+        class="form-control"
+        id="contact.Email_Address"
+        name="Email Address"
+        placeholder="your@email.com"
+        required=""
+        type="email"
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter a valid email address
+      </div>
+    </div>
+  </div>
+  <div
+    class="pb-3 row"
+  >
+    <div>
+      <label
+        class="form-label"
+        for="contact.Message"
+      >
+        Message 
+        <span>
+          *
+        </span>
+      </label>
+      <textarea
+        class="form-control"
+        id="contact.Message"
+        name="message"
+        placeholder="Enter your message here..."
+        required=""
+      />
+      <div
+        class="invalid-feedback"
+      >
+        Please enter your message.
+      </div>
+    </div>
+  </div>
+  <div
+    class="text-center"
+  >
+    <div
+      data-testid="mock-turnstile"
+    />
+  </div>
+  <div
+    style="opacity: 0; position: absolute; top: 0px; left: -5000px; height: 0px; width: 0px;"
+  >
+    <label
+      for="subscribe_a7fdfc1ea41e_48062"
+    />
+    <input
+      autocomplete="off"
+      id="email_subscribe_a7fdfc1ea41e_48062"
+      name="subscribe_a7fdfc1ea41e_48062"
+      placeholder="Your email here"
+      tabindex="-1"
+      type="email"
+      value=""
+    />
+  </div>
+  <input
+    autocomplete="off"
+    id="g-recaptcha-response"
+    name="g-recaptcha-response"
+    type="hidden"
+    value=""
+  />
+  <div
+    class="text-center"
+  >
+    <button
+      class="mb-2 btn btn-primary"
+      type="submit"
+    >
+      Send Message
+    </button>
+  </div>
+</form>
+`;
