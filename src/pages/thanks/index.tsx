@@ -15,7 +15,7 @@ function Thanks() {
   };
 
   return (
-    <div id="page-thanks" className="container px-3">
+    <div id="page-thanks" className="container page">
       <Header />
 
       <div className="text-center">

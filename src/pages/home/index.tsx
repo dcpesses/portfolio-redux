@@ -12,7 +12,7 @@ declare global {
 
 function Home() {
   return (
-    <div id="page-home" className="container px-3">
+    <div id="page-home" className="container page">
       <Header />
       <Hero />
       <Footer />

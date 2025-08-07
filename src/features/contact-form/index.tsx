@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Turnstile } from '@marsidev/react-turnstile';
 import './contact-form.css';
 

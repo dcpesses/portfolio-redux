@@ -3,7 +3,7 @@
 exports[`Thanks > Should render as expected 1`] = `
 <div>
   <div
-    class="container px-3"
+    class="container page"
     id="page-thanks"
   >
     <div
@@ -78,17 +78,23 @@ exports[`Thanks > Should render as expected 1`] = `
       <div
         class="border-top border-gray-600 pt-3 text-center small"
       >
-        <small>
-          © 2025 DannyZone.com. All rights reserved.
-        </small>
-        <br />
-        <small>
-          Content on this website is owned by its respective creators and is used with permission or under fair use guidelines.
-        </small>
-        <br />
-        <small
-          class="smaller opacity-25"
-        />
+        <div>
+          <small>
+            © 2025 DannyZone.com. All rights reserved.
+          </small>
+        </div>
+        <div
+          class="py-2"
+        >
+          <small>
+            Content on this website is owned by its respective creators and is used with permission or under fair use guidelines.
+          </small>
+        </div>
+        <div>
+          <small
+            class="smaller opacity-25"
+          />
+        </div>
       </div>
     </footer>
   </div>

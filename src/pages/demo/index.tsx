@@ -2,7 +2,7 @@ import {Counter} from '@/features/state-counter/Counter';
 import {ReduxCounter} from '@/features/redux-counter/ReduxCounter';
 
 import Todo from '@/features/todos/Todos';
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router';
 
 import './demo.css';
 

@@ -6,7 +6,7 @@ import './contact.css';
 
 function Contact() {
   return (
-    <div id="page-contact" className="container px-3">
+    <div id="page-contact" className="container page">
       <Header />
       <div className="text-center">
 
