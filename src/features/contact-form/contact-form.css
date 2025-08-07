@@ -4,6 +4,13 @@
   margin-right: auto;
 }
 
+@media (max-width: 575.98px) {
+  #contact-form .form-label {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
 #contact-form .form-label > span {
   vertical-align: 'super';
   color: var(--text-highlight);

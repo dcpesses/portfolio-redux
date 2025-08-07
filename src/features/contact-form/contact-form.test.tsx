@@ -92,10 +92,9 @@ describe('ContactForm', () => {
     expect(onFormSubmitSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
       {
         "Email Address": "john.doe@example.com",
-        "g-recaptcha-response": "",
+        "email_subscribe_a7fdfc1ea41e_48062": "",
         "message": "I love this app!",
         "name": "John Doe",
-        "subscribe_a7fdfc1ea41e_48062": "",
       }
     `);
     expect(setValidated).toHaveBeenCalled();
@@ -157,10 +156,9 @@ describe('ContactForm', () => {
     expect(onFormSubmitSpy.mock.calls[0][0]).toMatchInlineSnapshot(`
       {
         "Email Address": "",
-        "g-recaptcha-response": "",
+        "email_subscribe_a7fdfc1ea41e_48062": "",
         "message": "",
         "name": "John Doe",
-        "subscribe_a7fdfc1ea41e_48062": "",
       }
     `);
     expect(setValidated).not.toHaveBeenCalled();
