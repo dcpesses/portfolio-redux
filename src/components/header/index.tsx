@@ -19,8 +19,8 @@ function Header() {
   const handleShow = () => setShow(true);
 
   return (
-    <Navbar id="header" collapseOnSelect expand="sm" data-bs-theme="dark">
-      <Container fluid>
+    <Navbar id="header" collapseOnSelect expand="sm">
+      <Container>
         <Navbar.Brand as={Link} to={ '/' }>
           <DannyzoneLogo className="dannyzone-logo" aria-label="Dannyzone dot com site branding" />
         </Navbar.Brand>

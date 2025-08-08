@@ -7,17 +7,23 @@ import NotFound from '@/pages/not-found';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Header from '@/components/header';
 import '@/App.css';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/thanks" element={<Thanks />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/demo" element={<Demo />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <div className="App">
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/thanks" element={<Thanks />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/demo" element={<Demo />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 

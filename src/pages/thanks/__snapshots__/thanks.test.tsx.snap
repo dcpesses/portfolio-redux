@@ -7,9 +7,6 @@ exports[`Thanks > Should render as expected 1`] = `
     id="page-thanks"
   >
     <div
-      data-testid="HeaderMock"
-    />
-    <div
       class="text-center"
     >
       <div
