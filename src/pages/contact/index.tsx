@@ -1,4 +1,3 @@
-import Footer from '@/components/footer';
 import ContactForm from '@/features/contact-form';
 
 import './contact.css';
@@ -18,7 +17,6 @@ function Contact() {
         />
 
       </div>
-      <Footer />
     </div>
   );
 }

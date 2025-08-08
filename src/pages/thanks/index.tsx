@@ -1,5 +1,4 @@
 import Realistic from 'react-canvas-confetti/dist/presets/realistic';
-import Footer from '@/components/footer';
 import ThanksCheck from '@/assets/checkmark.svg?react';
 import ThanksCircleFill from 'bootstrap-icons/icons/circle-fill.svg?react';
 
@@ -39,8 +38,6 @@ function Thanks() {
           Your message has been sent successfully. Thanks for reaching out!
         </div>
       </div>
-
-      <Footer />
     </div>
 
   );
