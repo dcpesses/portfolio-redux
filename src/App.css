@@ -5,6 +5,7 @@
   --text-highlight: rgb(var(--text-highlight-rgb));
   --bg-primary: #212529;
   --bg-secondary: #13111c;
+  --bs-heading-color: #fdfdff;
 }
 
 /* reset */
@@ -20,8 +21,6 @@ body, p, ul, li {
 /* base styles */
 body {
   background-color: var(--bg-secondary);
-  color: var(--text-primary);
-
 }
 
 button {

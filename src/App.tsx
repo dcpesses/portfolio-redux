@@ -1,23 +1,31 @@
 import { Routes, Route } from 'react-router';
+import About from '@/pages/about';
 import Contact from '@/pages/contact';
-import Demo from '@/pages/demo';
 import Home from '@/pages/home';
 import Thanks from '@/pages/thanks';
 import NotFound from '@/pages/not-found';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 import '@/App.css';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/thanks" element={<Thanks />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/demo" element={<Demo />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <div className="App raleway">
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/thanks" element={<Thanks />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,0 +1,53 @@
+#page-about {
+  --timeline-color: #dde;
+}
+[data-bs-theme=dark] #page-about {
+  --timeline-color: #334;
+}
+#page-about .row {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#page-about #photo {
+  max-height: 256px;
+}
+
+#page-about .work-list {
+  border: 0 solid var(--timeline-color);
+  border-left-width: 1px;
+}
+#page-about .role {
+  position: relative;
+  padding: 0 1rem 2.5rem;
+}
+#page-about .role::before {
+    content: '\25CF';
+    color: var(--timeline-color);
+    position: absolute;
+    left: -1.25rem;
+    top: -0.25rem;
+    font-size: var(--bs-gutter-x);
+}
+#page-about .role p:first-child :is(span, i) {
+  display: block;
+}
+#page-about .role p:first-child span {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+#page-about .role p:first-child i {
+  font-weight: 400;
+  color: var(--bs-gray-500);
+}
+
+
+@media (max-width: 575.98px) {
+  #page-about #photo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

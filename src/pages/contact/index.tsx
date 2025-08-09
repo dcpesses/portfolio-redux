@@ -1,5 +1,3 @@
-import Header from '@/components/header';
-import Footer from '@/components/footer';
 import ContactForm from '@/features/contact-form';
 
 import './contact.css';
@@ -7,7 +5,6 @@ import './contact.css';
 function Contact() {
   return (
     <div id="page-contact" className="container page">
-      <Header />
       <div className="text-center">
 
         <h3>Contact Me</h3>
@@ -20,7 +17,6 @@ function Contact() {
         />
 
       </div>
-      <Footer />
     </div>
   );
 }
