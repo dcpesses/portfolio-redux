@@ -1,0 +1,23 @@
+#page-about {
+  --timeline-color: #dde;
+}
+[data-bs-theme=dark] #page-about {
+  --timeline-color: #334;
+}
+#page-about .row {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#page-about #photo {
+  max-height: 256px;
+}
+
+
+@media (max-width: 575.98px) {
+  #page-about #photo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

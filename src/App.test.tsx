@@ -6,6 +6,9 @@ import {mockWindowLocation} from '@/../tests/mockWindowLocation';
 
 import App from '@/App';
 
+vi.mock('@/pages/about', () => ({
+  default: () => <div data-testid="AboutMock" />
+}));
 vi.mock('@/pages/contact', () => ({
   default: () => <div data-testid="ContactMock" />
 }));
@@ -38,6 +41,18 @@ describe('App', () => {
     });
   });
 
+  test('Should render About route', () => {
+    mockWindowLocation('http://localhost:5173/about');
+    render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    );
+
+    expect(screen.getByTestId('AboutMock')).toBeInTheDocument();
+  });
   test('Should render Contact route', () => {
     mockWindowLocation('http://localhost:5173/contact');
     render(

@@ -38,8 +38,12 @@ describe('Header', () => {
   });
   test('Should open and close the "Coming Soon" modal', async() => {
     render(<Header />);
-    const aboutLink = screen.getByText('About');
-    await userEvent.click(aboutLink);
+
+    const dropdown = screen.getByText('Portfolio');
+    await userEvent.click(dropdown);
+
+    const unavailableLink = screen.getByTestId('coming-soon');
+    await userEvent.click(unavailableLink);
     const modalElement = screen.queryByRole('dialog');
     expect(modalElement).toBeInTheDocument();
 

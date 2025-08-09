@@ -27,7 +27,7 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center justify-content-md-end">
           <Nav className="pt-md-3 fs-md-5 text-center text-md-end">
-            <Nav.Link onClick={handleShow}>About</Nav.Link>
+            <Nav.Link as={NavLink} to={'/about'}>About</Nav.Link>
             <NavDropdown title="Portfolio" id="collapsible-nav-dropdown" align="start">
               <NavDropdown.Header>
                 Warner Bros. Discovery Projects
@@ -41,7 +41,7 @@ function Header() {
               <NavDropdown.Item href="https://www.wbtvd.com/">
                 <i className="bi bi-globe text-info" /> WBTVD.com <span className="text-secondary">*</span>
               </NavDropdown.Item>
-              <NavDropdown.Item onClick={handleShow}>
+              <NavDropdown.Item data-testid="coming-soon" onClick={handleShow}>
                 <i className="bi bi-globe text-info" /> Show Us Your Funny
               </NavDropdown.Item>
               <NavDropdown.Divider />
