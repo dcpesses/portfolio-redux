@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router';
 import About from '@/pages/about';
 import Contact from '@/pages/contact';
-import Demo from '@/pages/demo';
 import Home from '@/pages/home';
 import Thanks from '@/pages/thanks';
 import NotFound from '@/pages/not-found';
@@ -22,7 +21,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/thanks" element={<Thanks />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/demo" element={<Demo />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

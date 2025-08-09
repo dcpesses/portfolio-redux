@@ -12,9 +12,6 @@ vi.mock('@/pages/about', () => ({
 vi.mock('@/pages/contact', () => ({
   default: () => <div data-testid="ContactMock" />
 }));
-vi.mock('@/pages/demo', () => ({
-  default: () => <div data-testid="DemoMock" />
-}));
 vi.mock('@/pages/not-found', () => ({
   default: () => <div data-testid="NotFoundMock" />
 }));
@@ -77,18 +74,6 @@ describe('App', () => {
 
     expect(container).toBeDefined();
     // expect(container).toMatchSnapshot();  // no snapshots during active development
-  });
-  test('Should render Demo route', () => {
-    mockWindowLocation('http://localhost:5173/demo');
-    render(
-      <Provider store={store}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Provider>
-    );
-
-    expect(screen.getByTestId('DemoMock')).toBeInTheDocument();
   });
   test('Should render Thanks route', () => {
     mockWindowLocation('http://localhost:5173/thanks');
