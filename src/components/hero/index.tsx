@@ -13,7 +13,7 @@ export default function Hero() {
   ];
 
   const showSocials = () => socials.map(platform => (
-    <a key={platform.name} className="fs-2 hover-text-white" href={platform.url}>
+    <a key={platform.name} className="fs-1 mx-sm-1 hover-text-white" href={platform.url} data-umami-event={`outbound-link-click-${platform.name.toLowerCase()}`}>
       <i className={`bi bi-${platform.name.toLowerCase()}`} aria-label={`${platform.name} icon`}></i>
     </a>
   ));
@@ -31,7 +31,7 @@ export default function Hero() {
             using ReactJS, Node.js, and modern development practices.
             <a href="#" className="text-cyan hover-underline"></a>
           </p>
-          <div className="mt-3 d-flex gap-2 justify-content-center">
+          <div className="mt-3 d-flex gap-2 justify-content-center social-links">
             {showSocials()}
           </div>
         </div>
