@@ -6,6 +6,8 @@ import {mockWindowLocation} from '@/../tests/mockWindowLocation';
 
 import App from '@/App';
 
+global.fetch = vi.fn();
+
 vi.mock('@/pages/about', () => ({
   default: () => <div data-testid="AboutMock" />
 }));
@@ -20,6 +22,10 @@ vi.mock('@/pages/thanks', () => ({
 }));
 
 describe('App', () => {
+  vi.spyOn(global, 'fetch').mockResolvedValue({
+    json: () => Promise.resolve({ code: 200, }),
+  } as Response);
+
   const originalLocation = window.location;
 
   beforeEach(() => {
