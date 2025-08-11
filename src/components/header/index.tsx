@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import DropdownTrackedItem from '@/features/dropdown-tracked-item';
 
 import { Link, NavLink } from 'react-router';
 
@@ -32,35 +33,35 @@ function Header() {
               <NavDropdown.Header>
                 Warner Bros. Discovery Projects
               </NavDropdown.Header>
-              <NavDropdown.Item href="https://www.wbdscreeners.com/" data-umami-event="outbound-link-click" data-umami-event-url="https://www.wbdscreeners.com/">
+              <DropdownTrackedItem href="https://www.wbdscreeners.com/">
                 <i className="bi bi-globe text-info" /> WBD Screeners <span className="text-secondary">*</span>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://www.youtube.com/watch?v=Bhem5siuNZE" data-umami-event="outbound-link-click" data-umami-event-url="https://www.youtube.com/watch?v=Bhem5siuNZE">
+              </DropdownTrackedItem>
+              <DropdownTrackedItem href="https://www.youtube.com/watch?v=Bhem5siuNZE">
                 <i className="bi bi-arrow-return-right text-secondary" /> <i className="bi bi-youtube text-danger" /> Town Hall Demo Video
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://www.wbtvd.com/" data-umami-event="outbound-link-click" data-umami-event-url="https://www.wbtvd.com/">
+              </DropdownTrackedItem>
+              <DropdownTrackedItem href="https://www.wbtvd.com/">
                 <i className="bi bi-globe text-info" /> WBTVD.com <span className="text-secondary">*</span>
-              </NavDropdown.Item>
-              <NavDropdown.Item data-testid="coming-soon" onClick={handleShow}>
+              </DropdownTrackedItem>
+              <DropdownTrackedItem data-testid="coming-soon" onClick={handleShow}>
                 <i className="bi bi-globe text-info" /> Show Us Your Funny
-              </NavDropdown.Item>
+              </DropdownTrackedItem>
               <NavDropdown.Divider />
               <NavDropdown.Header>
                 Wordpress Sites
               </NavDropdown.Header>
-              <NavDropdown.Item href="https://www.challahcreations.com/" data-umami-event="outbound-link-click" data-umami-event-url="https://www.challahcreations.com/">
+              <DropdownTrackedItem href="https://www.challahcreations.com/">
                 <i className="bi bi-globe text-info" /> Challah Creations
-              </NavDropdown.Item>
+              </DropdownTrackedItem>
               <NavDropdown.Divider />
               <NavDropdown.Header>
                 Twitch Related Projects
               </NavDropdown.Header>
-              <NavDropdown.Item href="https://dcpesses.github.io/code-whisperer/" data-umami-event="outbound-link-click" data-umami-event-url="https://dcpesses.github.io/code-whisperer/">
+              <DropdownTrackedItem href="https://dcpesses.github.io/code-whisperer/">
                 <i className="bi bi-globe text-info" /> Code Whisperer
-              </NavDropdown.Item>
-              <NavDropdown.Item href="https://asukii314.github.io/twitch-request-wheel" data-umami-event="outbound-link-click" data-umami-event-url="https://asukii314.github.io/twitch-request-wheel">
+              </DropdownTrackedItem>
+              <DropdownTrackedItem href="https://asukii314.github.io/twitch-request-wheel">
                 <i className="bi bi-globe text-info" /> Game Request Wheel <span className="text-secondary">*</span>
-              </NavDropdown.Item>
+              </DropdownTrackedItem>
               <NavDropdown.Header className="text-end">
                 * Denotes Login Required
               </NavDropdown.Header>
