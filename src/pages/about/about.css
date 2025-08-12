@@ -43,7 +43,9 @@
   font-weight: 400;
   color: var(--bs-gray-500);
 }
-
+#page-about .role p {
+  margin-bottom: 0.25rem;
+}
 
 @media (max-width: 575.98px) {
   #page-about #photo {
