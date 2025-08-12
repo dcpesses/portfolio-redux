@@ -3,23 +3,8 @@
 .text-gray-300 { color: #d1d5db; }
 .text-gray-400 { color: #9ca3af; }
 
-.hover-text-white:hover { color: #ffffff; }
 
-.text-cyan { color: #22d3ee; }
-.text-cyan:hover { text-decoration: underline; }
 
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(to bottom right, #0ea5e9, #22d3ee); /* sky-500 to cyan-400 */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Icon stroke color */
-.icon-stroke {
-  stroke: #0891b2; /* cyan-600 */
-}
 
 /* Hover animation */
 .icon-hover {

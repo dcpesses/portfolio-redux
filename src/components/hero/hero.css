@@ -1,3 +1,15 @@
+
+#hero .gradient-text {
+  background: linear-gradient(to bottom right, var(--bs-body-color), var(--bs-primary-text-emphasis));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-white { color: #fff; }
+.text-gray-100 { color: #f1f5f9; }
+.text-gray-200 { color: #e5e7eb; }
+
+
 #hero #hero-avatar {
   height: auto;
   width: 256px;
@@ -40,6 +52,28 @@
   background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 }
 
+/* .social-links.alt1 a {
+  background-color: #fff;
+  padding: 0.25rem 1rem;
+  border-radius: 3rem;
+}
+
+.social-links.alt2 a {
+  background-color: var(--bs-link-color);
+  color: var(--bs-primary-bg-subtle);
+  padding: 0.25rem;
+  border-radius: 3rem;
+  font-size: 36px;
+  line-height: 1;
+  padding: 0.64rem;
+} */
+
+@media (max-width: 575.98px){
+  .social-links .fs-1 {
+    font-size: 2.5rem !important;
+    margin: 0 1vw;
+  }
+}
 @media (min-width: 576px) and (max-width: 767.98px) {
   #hero > div {
     align-items: flex-start!important;

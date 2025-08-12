@@ -8,12 +8,13 @@ export default function Hero() {
     // {color: '#4267B2', name: 'Facebook', url: 'https://www.facebook.com/dcpesses'},
     {color: '#000000', name: 'GitHub', url: 'https://www.github.com/dcpesses'},
     {color: '#0077B5', name: 'LinkedIn', url: 'https://www.linkedin.com/in/dcpesses'},
+    {color: '#1083fe', name: 'Bluesky', url: 'https://bsky.app/profile/dcpesses.bsky.social'},
     {color: '#FF0000', name: 'Youtube', url: 'https://www.youtube.com/dcpesses'},
     {color: '#6441A4', name: 'Twitch', url: 'https://www.twitch.com/dcpesses'},
   ];
 
   const showSocials = () => socials.map(platform => (
-    <a key={platform.name} className="fs-2 hover-text-white" href={platform.url}>
+    <a key={platform.name} className="fs-1 lh-1 mx-sm-1 hover-text-white" href={platform.url} data-umami-event={`outbound-link-click-${platform.name.toLowerCase()}`}>
       <i className={`bi bi-${platform.name.toLowerCase()}`} aria-label={`${platform.name} icon`}></i>
     </a>
   ));
@@ -22,8 +23,8 @@ export default function Hero() {
     <section id="hero" className="container py-4 px-3">
       <div className="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between gap-4">
         <div>
-          <h3 className="fw-semibold">
-            Hi there, <div className="d-inline-block">I&lsquo;m <span className="gradient-text">Danny Pesses</span> 👋</div>
+          <h3 className="fw-medium text-body">
+            Hi there! <div className="d-inline-block">I&apos;m <span className="gradient-text-disabled fw-semibold text-body-emphasis">Daniel Pesses</span> 👋</div>
           </h3>
           <p className="mt-4 fs-6 fs-md-5 lh-base">
             A passionate senior web developer from Los Angeles,
@@ -31,7 +32,7 @@ export default function Hero() {
             using ReactJS, Node.js, and modern development practices.
             <a href="#" className="text-cyan hover-underline"></a>
           </p>
-          <div className="mt-3 d-flex gap-2 justify-content-center">
+          <div className="mt-3 d-flex gap-2 justify-content-center social-links">
             {showSocials()}
           </div>
         </div>

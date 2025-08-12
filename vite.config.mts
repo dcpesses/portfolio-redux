@@ -44,4 +44,7 @@ export default defineConfig({
       interopDefault: true,
     },
   },
+  define: {
+    'process.env': {}
+  },
 });
