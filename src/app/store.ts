@@ -1,8 +1,10 @@
 import {configureStore, ThunkAction, Action} from '@reduxjs/toolkit';
-import todosReducer from '../features/todos/todosSlice';
+import todosReducer from '@/features/todos/todosSlice';
+import projectsReducer from '@/features/projects/projectsSlice';
 
 const reducer = {
-  todos: todosReducer
+  todos: todosReducer,
+  projects: projectsReducer
 };
 export const store = configureStore({ reducer });
 
