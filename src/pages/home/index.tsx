@@ -1,5 +1,5 @@
 import Hero from '@/components/hero';
-import Projects from '@/components/projects';
+import Projects from '@/features/projects';
 
 import './home.css';
 

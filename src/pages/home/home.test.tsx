@@ -21,6 +21,10 @@ vi.mock('react-router', () => {
   };
 });
 
+vi.mock('@/features/projects', () => ({
+  default: () => <div data-testid="ProjectsMock" />
+}));
+
 describe('Home', () => {
   test('Should render without error', () => {
     const {container} = render(<Home />);
