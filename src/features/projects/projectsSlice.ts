@@ -21,7 +21,8 @@ export interface ProjectItem {
   image: string | undefined;
   url: string;
   description: string;
-
+  screenshot: string | undefined;
+  demo: string | null;
 }
 
 const initialState: ProjectsState = {
@@ -32,7 +33,9 @@ const initialState: ProjectsState = {
       role: 'Frontend Developer',
       image: thumbWBD,
       url: 'https://www.wbdscreeners.com/',
-      description: '',
+      description: 'Warner Bros. Discovery\'s most comprehensive streaming library of film and television content. Developed and maintained video streaming B2B app for web, Chromecast, and desktop platforms, utilizing Widevine/Fairplay/PlayReady DRM, MFA login, offline playback, anti-piracy methods; built using ReactJS, Typescript/JavaScript, ES6, NodeJS, Babel, Webpack, JSON, Git, NPM, Yarn, and modern frameworks.',
+      screenshot: undefined,
+      demo: 'https://www.youtube.com/watch?v=Bhem5siuNZE'
     },
     {
       title: 'Code Whisperer',
@@ -40,7 +43,9 @@ const initialState: ProjectsState = {
       role: 'Full-Stack Developer',
       image: thumbCodeWhisperer,
       url: 'https://dcpesses.github.io/code-whisperer/',
-      description: '',
+      description: 'Single Page Application for Twitch streamers to send game invites to only approved chatters. Built using Vite, React 19, Redux, ReactRouter, TypeScript, Vitest, React Testing Library; deployed using GitHub Actions workflow.',
+      screenshot: undefined,
+      demo: null,
     },
     {
       title: 'Challah Creations',
@@ -49,6 +54,8 @@ const initialState: ProjectsState = {
       image: thumbChallah,
       url: 'https://www.challahcreations.com/',
       description: 'Built and deployed a responsive and easy to update WordPress site for my sister\'s challah baking business, optimized for mobile usability, SEO, and page speed performance.',
+      screenshot: undefined,
+      demo: null,
     },
     {
       title: 'WBFYC',
@@ -57,6 +64,8 @@ const initialState: ProjectsState = {
       image: thumbWBFYC,
       url: 'https://www.wbfyc.com/',
       description: 'Developed a responsive and minimal WordPress site to promote the award screener apps for Warner Bros, utilizing a custom child theme on Highend for flexible content management, and implementing a modular component system using Advanced Custom Fields and Gutenberg blocks.',
+      screenshot: undefined,
+      demo: null,
     },
     {
       title: 'WWTVM Halloween',
@@ -65,6 +74,8 @@ const initialState: ProjectsState = {
       image: thumbHalloween,
       url: 'https://wbtvmarketing.com/photos/',
       description: 'Developed, deployed, and maintained an internally hosted WordPress photo gallery for Worldwide TV Marketing\'s annual Halloween Party at Warner Bros, integrating Okta Single Sign-On for division-specific online voting and access without account creation.',
+      screenshot: undefined,
+      demo: null,
     },
     {
       title: 'Show Us Your Funny',
@@ -73,6 +84,8 @@ const initialState: ProjectsState = {
       image: thumbFunny,
       url: 'https://sitcoms.wbtvd.com/',
       description: '',
+      screenshot: undefined,
+      demo: null,
     },
     {
       title: 'Game Request Wheel',
@@ -81,6 +94,8 @@ const initialState: ProjectsState = {
       image: thumbWheel,
       url: 'https://asukii314.github.io/twitch-request-wheel/',
       description: '',
+      screenshot: undefined,
+      demo: null,
     },
   /*{
     title: 'Placeholder',
@@ -89,6 +104,8 @@ const initialState: ProjectsState = {
     image: thumbPlaceholder,
     url: 'https://www.challahcreations.com/',
     description: '',
+    screenshot: undefined,
+    demo: null,
   },*/
   ],
   selected: 0,
