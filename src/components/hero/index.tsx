@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="d-flex flex-column align-items-center flex-sm-row justify-content-sm-between gap-4">
         <div>
           <h3 className="fw-medium text-body">
-            Hi there! <div className="d-inline-block">I&apos;m <span className="gradient-text-disabled fw-semibold text-body-emphasis">Daniel Pesses</span> 👋</div>
+            Hi there! <div className="d-inline-block">I&apos;m <span className="fw-semibold text-body-emphasis">Daniel Pesses</span> 👋</div>
           </h3>
           <p className="mt-4 fs-6 fs-md-5 lh-base">
             A passionate senior web developer from Los Angeles,
