@@ -1,9 +1,10 @@
 import { projectItems } from './projectsSlice';
 import { useAppSelector } from '@/app/hooks';
+import { Link } from 'react-router';
 
 import './projects.css';
 
-export default function Projects() {
+export default function RecentProjects() {
   const projectsItems = useAppSelector(projectItems);
   const projects = projectsItems.slice(0, 3);
   return (
@@ -39,6 +40,9 @@ export default function Projects() {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <Link className="fs-5 fw-semibold" to="/projects">View All</Link>
       </div>
     </section>
   );
