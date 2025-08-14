@@ -98,7 +98,12 @@ function Projects() {
         }
       </div>
       <Modal
-        id="modal-selected-project" show={show} fullscreen="md-down" dialogClassName="modal-90w" onHide={handleClose}
+        id="modal-selected-project"
+        size="lg"
+        show={show}
+        fullscreen="md-down"
+        dialogClassName="modal-90w"
+        onHide={handleClose}
       >
         <Modal.Header closeButton>
           <Modal.Title>
@@ -129,12 +134,36 @@ function Projects() {
                   <span key={i} className="badge-tag rounded-pill bg-secondary">{tag}</span>
                 ))}
               </div> */}
+              {selectedProject.about !== undefined && (
+                <p className="mt-3 small lh-sm text-secondary about">
+                  {selectedProject.about}
+                </p>
+              )}
               <p className="mt-3 text-secondary-emphasis description">
                 {selectedProject.description}
               </p>
               <div className="mt-4 text-end">
                 {selectedProject.url && (
-                  <a className="btn btn-primary" href={selectedProject.url}>View Site <i className="bi bi-box-arrow-up-right" /></a>
+                  <a className="btn btn-primary"
+                    href={selectedProject.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-umami-event="projects-outbound-link-click"
+                    data-umami-event-value={selectedProject.url}
+                  >
+                    View Site <i className="bi bi-box-arrow-up-right" />
+                  </a>
+                )}
+                {selectedProject.demo && (
+                  <a className="btn btn-primary ms-2"
+                    href={selectedProject.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    data-umami-event="projects-outbound-link-click"
+                    data-umami-event-value={selectedProject.demo}
+                  >
+                    View Demo <i className="bi bi-box-arrow-up-right" />
+                  </a>
                 )}
               </div>
             </div>

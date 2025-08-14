@@ -16,8 +16,9 @@ describe('projects reducer', () => {
     image: undefined,
     url: `mockUrl${id}`,
     description: `mockDescription${id}`,
-    screenshot: undefined,
+    screenshots: undefined,
     demo: null,
+    about: undefined,
   });
   const initialState: ProjectsState = {
     items: [
