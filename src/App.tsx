@@ -3,6 +3,7 @@ import { UmamiAnalytics } from '@giof/react-umami';
 import About from '@/pages/about';
 import Contact from '@/pages/contact';
 import Home from '@/pages/home';
+import Projects from '@/pages/projects';
 import Thanks from '@/pages/thanks';
 import NotFound from '@/pages/not-found';
 import UmamiTest from '@/umami-test';
@@ -29,8 +30,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/thanks" element={<Thanks />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thanks" element={<Thanks />} />
           <Route path="/umami" element={<UmamiTest />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

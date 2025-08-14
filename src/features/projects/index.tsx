@@ -33,9 +33,9 @@ export default function Projects() {
               <p className="mt-3 text-secondary-emphasis description">
                 {project.description}
               </p>
-              {project.url ? (
+              {project.url && (
                 <a href={project.url}>View Site <i className="bi bi-box-arrow-up-right" /></a>
-              ) : null}
+              )}
             </div>
           </div>
         ))}
