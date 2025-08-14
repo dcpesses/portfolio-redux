@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Modal from 'react-bootstrap/Modal';
+import ScreenshotCarousel from '@/components/screenshot-carousel';
 
 import { projectItems, projectItemSelected, selectItem } from '@/features/projects/projectsSlice';
 import { useAppSelector, useAppDispatch } from '@/app/hooks';
@@ -119,16 +120,11 @@ function Projects() {
         <Modal.Body>
           <div className="d-flex flex-column flex-md-row align-items-center align-items-md-start rounded p-3">
             <div>
-              {/* {(selectedProject.screenshot) && (
-                <div className="text-center">
-                  <img
-                    src={selectedProject.image}
-                    className="img-fluid"
-                    alt={selectedProject.title}
-                  />
+              {selectedProject.screenshots !== undefined && (
+                <div className="screenshots-carousel">
+                  <ScreenshotCarousel title={selectedProject.title} screenshots={selectedProject.screenshots} />
                 </div>
-              )} */}
-
+              )}
               {/* <div className="d-flex flex-wrap gap-2">
                 {selectedProject.tags.map((tag, i) => (
                   <span key={i} className="badge-tag rounded-pill bg-secondary">{tag}</span>
