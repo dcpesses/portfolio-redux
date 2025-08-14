@@ -31,11 +31,16 @@ small, .small {
 
 /* Site wide styles */
 
-.App a{
+.App a {
   --bs-link-color: rgba(var(--text-highlight-rgb), 1);
   --bs-link-color-rgb: var(--text-highlight-rgb);
   --bs-link-hover-color: rgba(255, 255, 255, 1);
   transition: color 0.125s;
+  text-decoration: none;
+}
+.App a:hover {
+  /* text-decoration: underline; */
+  color: #ffffff;
 }
 
 .page {

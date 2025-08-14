@@ -1,0 +1,9 @@
+
+.recent-project img {
+  /* width: 144px; */
+  height: 144px;
+  width: auto;
+}
+.recent-projects p {
+  color: #9ca3af;
+}

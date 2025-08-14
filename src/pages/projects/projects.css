@@ -1,0 +1,67 @@
+#page-projects {
+  --timeline-color: #dde;
+}
+[data-bs-theme=dark] #page-projects {
+  --timeline-color: #334;
+}
+#page-projects .row {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#page-projects .card-subtitle .badge {
+  font-weight: 600;
+}
+#page-projects p.card-text {
+  font-size:14px;
+}
+#page-projects a .bi-box-arrow-up-right::before {
+  vertical-align: baseline!important;
+}
+
+#modal-selected-project .modal-content{
+  background-color: #1e293b!important;
+}
+#modal-selected-project .modal-title img {
+  max-height: 2rem !important;
+}
+
+#page-projects .work-list {
+  border: 0 solid var(--timeline-color);
+  border-left-width: 1px;
+}
+#page-projects .role {
+  position: relative;
+  padding: 0 1rem 2.5rem;
+}
+#page-projects .role::before {
+    content: '\25CF';
+    color: var(--timeline-color);
+    position: absolute;
+    left: -1.25rem;
+    top: -0.25rem;
+    font-size: var(--bs-gutter-x);
+}
+#page-projects .role p:first-child :is(span, i) {
+  display: block;
+}
+#page-projects .role p:first-child span {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+#page-projects .role p:first-child i {
+  font-weight: 400;
+  color: var(--bs-gray-500);
+}
+#page-projects .role p {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 575.98px) {
+  #page-projects #photo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

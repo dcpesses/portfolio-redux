@@ -1,4 +1,5 @@
 import Hero from '@/components/hero';
+import Projects from '@/features/projects';
 
 import './home.css';
 
@@ -12,6 +13,7 @@ function Home() {
   return (
     <div id="page-home" className="container page">
       <Hero />
+      <Projects />
     </div>
   );
 }
