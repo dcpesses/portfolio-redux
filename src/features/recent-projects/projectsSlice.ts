@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '@/app/store';
 
 import thumbChallah from '@/assets/projects/challah-creations.png';
-import thumbCodeWhisperer from '@/assets/projects/code-whisperer.svg?inline';
+import thumbCodeWhisperer from '@/assets/projects/code-whisperer.svg?url';
 import thumbWheel from '@/assets/projects/game-request-wheel.png';
 import thumbFunny from '@/assets/projects/show-us-your-funny.jpg';
 import thumbWBD from '@/assets/projects/wbd-screeners.png';
