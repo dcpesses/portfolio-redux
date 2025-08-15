@@ -1,5 +1,8 @@
 import {render} from '@testing-library/react';
 import {LinkProps, NavLinkProps, PropsWithChildren} from '@/../tests/mockReactRouterHelper';
+import { getStoreWithState } from '@/app/store';
+import { Provider } from 'react-redux';
+import { Store, UnknownAction } from '@reduxjs/toolkit';
 import Home from './index';
 
 vi.mock('react-router', () => {
@@ -21,14 +24,18 @@ vi.mock('react-router', () => {
   };
 });
 
-vi.mock('@/features/projects', () => ({
-  default: () => <div data-testid="ProjectsMock" />
-}));
-
 describe('Home', () => {
+  let store: Store<unknown, UnknownAction, unknown>;
+  beforeEach(() => {
+    store = getStoreWithState();
+  });
   test('Should render without error', () => {
-    const {container} = render(<Home />);
-    // expect(container).toMatchSnapshot();
+    const {container} = render(
+      <Provider store={store}>
+        <Home />
+      </Provider>
+    );
+
     expect(container).toBeDefined();
   });
 });

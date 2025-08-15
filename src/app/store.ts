@@ -1,6 +1,6 @@
 import {configureStore, ThunkAction, Action} from '@reduxjs/toolkit';
 import todosReducer from '@/features/todos/todosSlice';
-import projectsReducer from '@/features/projects/projectsSlice';
+import projectsReducer from '@/features/recent-projects/projectsSlice';
 
 const reducer = {
   todos: todosReducer,

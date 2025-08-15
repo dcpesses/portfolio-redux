@@ -20,8 +20,9 @@ export interface ProjectItem {
   role: string;
   image: string | undefined;
   url: string;
+  about: string | undefined;
   description: string;
-  screenshot: string | undefined;
+  screenshots: string[] | undefined;
   demo: string | null;
 }
 
@@ -33,8 +34,9 @@ const initialState: ProjectsState = {
       role: 'Frontend Developer',
       image: thumbWBD,
       url: 'https://www.wbdscreeners.com/',
-      description: 'Warner Bros. Discovery\'s most comprehensive streaming library of film and television content. Developed and maintained video streaming B2B app for web, Chromecast, and desktop platforms, utilizing Widevine/Fairplay/PlayReady DRM, MFA login, offline playback, anti-piracy methods; built using ReactJS, Typescript/JavaScript, ES6, NodeJS, Babel, Webpack, JSON, Git, NPM, Yarn, and modern frameworks.',
-      screenshot: undefined,
+      about: 'WBD Screeners allows authorized Warner Bros. Discovery Partners, Clients, and Employees the ability to preview and download or stream Warner Bros. Discovery TV and Film content. (Pre-authorization from a Warner Bros. Discovery Contact and login credentials are required to use the app.)',
+      description: 'Developed and maintained video streaming B2B app for web, Chromecast, and desktop platforms, utilizing Widevine/Fairplay/PlayReady DRM, MFA login, offline playback, anti-piracy methods; built using ReactJS, Typescript/JavaScript, ES6, NodeJS, Babel, Webpack, JSON, Git, NPM, Yarn, and modern frameworks.',
+      screenshots: ['wbd-screeners1.jpg', 'wbd-screeners2.jpg', 'wbd-screeners3.jpg'],
       demo: 'https://www.youtube.com/watch?v=Bhem5siuNZE'
     },
     {
@@ -43,8 +45,9 @@ const initialState: ProjectsState = {
       role: 'Full-Stack Developer',
       image: thumbCodeWhisperer,
       url: 'https://dcpesses.github.io/code-whisperer/',
+      about: undefined,
       description: 'Single Page Application for Twitch streamers to send game invites to only approved chatters. Built using Vite, React 19, Redux, ReactRouter, TypeScript, Vitest, React Testing Library; deployed using GitHub Actions workflow.',
-      screenshot: undefined,
+      screenshots: ['code-whisperer1.png', 'code-whisperer2.jpg'],
       demo: null,
     },
     {
@@ -53,9 +56,10 @@ const initialState: ProjectsState = {
       role: 'Full-Stack Developer',
       image: thumbChallah,
       url: 'https://www.challahcreations.com/',
+      about: undefined,
       description: 'Built and deployed a responsive and easy to update WordPress site for my sister\'s challah baking business, optimized for mobile usability, SEO, and page speed performance.',
-      screenshot: undefined,
-      demo: null,
+      screenshots: ['challah-creations1.jpg'],
+      demo: null
     },
     {
       title: 'WBFYC',
@@ -63,9 +67,10 @@ const initialState: ProjectsState = {
       role: 'Frontend Developer',
       image: thumbWBFYC,
       url: 'https://www.wbfyc.com/',
+      about: undefined,
       description: 'Developed a responsive and minimal WordPress site to promote the award screener apps for Warner Bros, utilizing a custom child theme on Highend for flexible content management, and implementing a modular component system using Advanced Custom Fields and Gutenberg blocks.',
-      screenshot: undefined,
-      demo: null,
+      screenshots: [''],
+      demo: null
     },
     {
       title: 'WWTVM Halloween',
@@ -73,9 +78,10 @@ const initialState: ProjectsState = {
       role: 'Full-Stack Developer',
       image: thumbHalloween,
       url: 'https://wbtvmarketing.com/photos/',
+      about: undefined,
       description: 'Developed, deployed, and maintained an internally hosted WordPress photo gallery for Worldwide TV Marketing\'s annual Halloween Party at Warner Bros, integrating Okta Single Sign-On for division-specific online voting and access without account creation.',
-      screenshot: undefined,
-      demo: null,
+      screenshots: ['wwtvm-halloween1.jpg'],
+      demo: null
     },
     {
       title: 'Show Us Your Funny',
@@ -83,9 +89,10 @@ const initialState: ProjectsState = {
       role: 'Frontend Developer',
       image: thumbFunny,
       url: 'https://sitcoms.wbtvd.com/',
+      about: undefined,
       description: '',
-      screenshot: undefined,
-      demo: null,
+      screenshots: ['show-us-your-funny1.jpg'],
+      demo: null
     },
     {
       title: 'Game Request Wheel',
@@ -93,9 +100,10 @@ const initialState: ProjectsState = {
       role: 'Frontend Developer',
       image: thumbWheel,
       url: 'https://asukii314.github.io/twitch-request-wheel/',
+      about: undefined,
       description: '',
-      screenshot: undefined,
-      demo: null,
+      screenshots: ['game-request-wheel1.jpg', 'game-request-wheel2.jpg', 'game-request-wheel3.jpg'],
+      demo: null
     },
   /*{
     title: 'Placeholder',
@@ -104,7 +112,7 @@ const initialState: ProjectsState = {
     image: thumbPlaceholder,
     url: 'https://www.challahcreations.com/',
     description: '',
-    screenshot: undefined,
+    screenshots: undefined,
     demo: null,
   },*/
   ],

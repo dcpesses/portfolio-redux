@@ -25,6 +25,9 @@
 #modal-selected-project .modal-title img {
   max-height: 2rem !important;
 }
+#modal-selected-project .modal-title {
+  flex-grow: 1;
+}
 
 #page-projects .work-list {
   border: 0 solid var(--timeline-color);
