@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router';
+import { Outlet, createBrowserRouter, RouterProvider, ScrollRestoration } from 'react-router';
 import { UmamiAnalytics } from '@giof/react-umami';
 import About from '@/pages/about';
 import Contact from '@/pages/contact';
@@ -14,7 +14,17 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import '@/App.css';
 
-function App() {
+const AppRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/about', element: <About />},
+  { path: '/projects', element: <Projects />},
+  { path: '/contact', element: <Contact />},
+  { path: '/thanks', element: <Thanks />},
+  { path: '/umami', element: <UmamiTest />},
+  { path: '*', element: <NotFound />},
+];
+
+function AppLayout() {
   return (
     <div className="App raleway">
       <UmamiAnalytics
@@ -27,19 +37,27 @@ function App() {
       />
       <Header />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/thanks" element={<Thanks />} />
-          <Route path="/umami" element={<UmamiTest />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Outlet />
       </main>
       <Footer />
+      <ScrollRestoration />
     </div>
   );
 }
 
+
+
+function App() {
+  const router = createBrowserRouter(
+    [{
+      element: <AppLayout/>,
+      children: AppRoutes
+    }],
+    { basename: '/portfolio-redux' }
+  );
+  return <RouterProvider router={router} />;
+}
+
 export default App;
+export { AppLayout, AppRoutes };
+

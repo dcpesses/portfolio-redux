@@ -23,7 +23,8 @@
   background-color: #1e293b!important;
 }
 #modal-selected-project .modal-title img {
-  max-height: 2rem !important;
+  height: 2rem;
+  width: 2rem;
 }
 #modal-selected-project .modal-title {
   flex-grow: 1;

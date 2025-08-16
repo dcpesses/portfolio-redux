@@ -42,7 +42,7 @@ export default function RecentProjects() {
         ))}
       </div>
       <div className="mt-2 text-end">
-        <Link className="fs-5 fw-semibold" to="/projects">View All</Link>
+        <Link className="fs-5 fw-semibold text-body-emphasis" to="/projects">View All &rarr;</Link>
       </div>
     </section>
   );
