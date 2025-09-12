@@ -69,7 +69,7 @@ const initialState: ProjectsState = {
       url: 'https://www.wbfyc.com/',
       about: undefined,
       description: 'Developed a responsive and minimal WordPress site to promote the award screener apps for Warner Bros, utilizing a custom child theme on Highend for flexible content management, and implementing a modular component system using Advanced Custom Fields and Gutenberg blocks.',
-      screenshots: [''],
+      screenshots: ['wbfyc1.jpg'],
       demo: null
     },
     {
