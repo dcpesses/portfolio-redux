@@ -16,7 +16,7 @@ function About() {
             Seasoned, results-driven Senior Web Developer with extensive experience in ReactJS, Node.js, and a wide array of modern web development tools and frameworks. Excel in crafting innovative web applications for major entertainment and media companies, with a knack for bridging technical excellence with creative flair.
           </p>
           <p className="mb-4 fs-sm-6 fs-md-5 lh-base">
-            Most recently played a pivotal role in building and maintaining several in-house video streaming apps for multiple platforms, currently used to promote high-profile media for content licensing and award nominations as well as VIP screening events.
+            Most recently played a pivotal role in building and maintaining several in-house video streaming apps at Warner Bros. Discovery, currently used to promote high-profile media for content licensing and award nominations as well as VIP screening events.
           </p>
         </div>
       </div>

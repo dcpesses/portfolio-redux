@@ -44,7 +44,7 @@ function Projects() {
                     Role: {project.role}
                   </Card.Subtitle>
                   <div className="text-center">
-                    <button type="button" className="btn btn-primary" data-testid={`view-info-${idx}`}>View Info</button>
+                    <button type="button" className="btn btn-primary" data-testid={`view-info-${idx}`}>More Info</button>
                   </div>
                 </Card.Body>
               </Card>
