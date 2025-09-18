@@ -53,6 +53,7 @@ jobs:
 
   coverage:
     name: Coverage Analysis
+    if: github.ref != 'refs/heads/feature/ftp-deploy'
     needs: buildAndTest
     runs-on: ubuntu-latest
     steps:
@@ -109,20 +110,43 @@ jobs:
       #     publish_dir: dist
 
       - name: Find and Replace Basename
-        id: find_replace_basename
+        id: find_replace_basename1
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**/index*.!(map)"
+          include: "**index**.@(html|js|css)"
+
+      - name: Find and Replace Basename
+        id: find_replace_basename2
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "/portfolio-redux"
+          replace: ""
+          regex: false
+          include: "**/**index**.*"
+
+      - name: Find and Replace Basename
+        id: find_replace_basename3
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "/portfolio-redux"
+          replace: ""
+          regex: false
+          include: "**/**index**.@(html|js|css)"
+
 
       - name: Modified Files
         run:
           echo "find_replace_datetime:"
-          echo "${{ steps.find_replace_datetime.outputs.modifiedFiles }}"
-          echo "find_replace_basename:"
-          echo "${{ steps.find_replace_basename.outputs.modifiedFiles }}"
+          echo "${{ steps.find_replace_datetime.outputs.modifiedFiles }}\n"
+          echo "find_replace_basename1:"
+          echo "${{ steps.find_replace_basename1.outputs.modifiedFiles }}\n"
+          echo "find_replace_basename2:"
+          echo "${{ steps.find_replace_basename2.outputs.modifiedFiles }}\n"
+          echo "find_replace_basename3:"
+          echo "${{ steps.find_replace_basename3.outputs.modifiedFiles }}\n"
 
       - name: 🚀 FTP Deploy to Bluehost
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
