@@ -39,27 +39,6 @@ jobs:
       - name: 🧪 Test
         run: npm run test:ci
 
-      ## START FTP DEPLOY TEST
-
-      - name: Find and Replace Basename
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: "/portfolio-redux"
-          replace: ""
-          regex: false
-          include: "**/index*.!(map)"
-
-      - name: 🚀 FTP Deploy to Bluehost
-        uses: samkirkland/ftp-deploy-action@v4.3.6
-        with:
-          server: ${{ secrets.FTPDEPLOY_SERVER }}
-          username: ${{ secrets.FTPDEPLOY_USERNAME }}
-          password: ${{ secrets.FTPDEPLOY_PASSWORD }}
-          protocol: ftps
-          local-dir: ./dist/
-
-      ## END FTP DEPLOY TEST
-
       # Upload dist artifacts
       - uses: actions/upload-artifact@v4
         with:
@@ -89,6 +68,70 @@ jobs:
         uses: codecov/codecov-action@v5.5.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+
+  deployFTP:
+    name: Deploy to FTP
+    # Deploy only for test branch
+    if: github.ref == 'refs/heads/feature/ftp-deploy'
+    needs: buildAndTest
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    environment:
+      name: prod
+      url: https://dcpesses.github.io/portfolio-redux/ # <- Change to your site url
+    steps:
+      # Download dist artifacts
+      - uses: actions/download-artifact@v5
+        with:
+          name: dist
+          path: dist/
+
+      - name: Set current date as env variable
+        run: echo "NOW=$(TZ=America/Los_Angeles date +'%F %T %Z')" >> $GITHUB_ENV
+
+      # - name: Debug current date
+      #   run: echo "${{ env.NOW }}" # Gives "2024-02-16 16:53:32 PST" modifiedFiles
+
+      - name: Find and Replace
+        id: find_replace_datetime
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "DATE_TIME"
+          replace: "${{ env.NOW }}"
+          regex: false
+          include: "**index.html"
+
+      # - name: 🚀 Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v4.0.0
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: dist
+
+      - name: Find and Replace Basename
+        id: find_replace_basename
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "/portfolio-redux"
+          replace: ""
+          regex: false
+          include: "**/index*.!(map)"
+
+      - name: Modified Files
+        run:
+          echo "find_replace_datetime:"
+          echo "${{ steps.find_replace_datetime.outputs.modifiedFiles }}"
+          echo "find_replace_basename:"
+          echo "${{ steps.find_replace_basename.outputs.modifiedFiles }}"
+
+      - name: 🚀 FTP Deploy to Bluehost
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTPDEPLOY_SERVER }}
+          username: ${{ secrets.FTPDEPLOY_USERNAME }}
+          password: ${{ secrets.FTPDEPLOY_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
 
   deploy:
     name: Deploy
