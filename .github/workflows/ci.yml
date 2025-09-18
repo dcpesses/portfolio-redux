@@ -109,45 +109,45 @@ jobs:
       #     github_token: ${{ secrets.GITHUB_TOKEN }}
       #     publish_dir: dist
 
-      - name: Find and Replace Basename
+      - name: Find and Replace Basename 1
         id: find_replace_basename1
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**index*.{html,js,css}"
+          include: "**/*(index*.{html,js,css}|site.webmanifest)"
 
-      - name: Find and Replace Basename
+      - name: Find and Replace Basename 2
         id: find_replace_basename2
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**/index*.{html,js,css}"
+          include: "**/(index*.{html,js,css}|site.webmanifest)"
 
 
-      - name: Find and Replace Basename
+      - name: Find and Replace Basename 3
         id: find_replace_basename3
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**/index*.*{html,js,css}"
+          include: "**(index*.{html,js,css}|site.webmanifest)"
 
 
       - name: Modified Files
         run:
           echo "datetime:"
-          echo "${{ steps.find_replace_datetime.outputs.modifiedFiles }} \r\n"
+          echo "${{ steps.find_replace_datetime.outputs.modifiedFiles }} |"
           echo "basename1:"
-          echo "${{ steps.find_replace_basename1.outputs.modifiedFiles }} \r\n"
+          echo "${{ steps.find_replace_basename1.outputs.modifiedFiles }} |"
           echo "basename2:"
-          echo "${{ steps.find_replace_basename2.outputs.modifiedFiles }} \r\n"
+          echo "${{ steps.find_replace_basename2.outputs.modifiedFiles }} |"
           echo "basename3:"
-          echo "${{ steps.find_replace_basename3.outputs.modifiedFiles }} \r\n"
+          echo "${{ steps.find_replace_basename3.outputs.modifiedFiles }} |"
 
       - name: 🚀 FTP Deploy to Bluehost
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
