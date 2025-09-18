@@ -116,7 +116,7 @@ jobs:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**index**.@(html|js|css)"
+          include: "**/**index**.!(map)"
 
       - name: Find and Replace Basename
         id: find_replace_basename2
@@ -125,7 +125,7 @@ jobs:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**/**index**.*"
+          include: "**/**index**.(html|js|css)"
 
       - name: Find and Replace Basename
         id: find_replace_basename3
@@ -134,7 +134,7 @@ jobs:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**/**index**.@(html|js|css)"
+          include: "**/**index**.*(html|js|css)"
 
 
       - name: Modified Files
