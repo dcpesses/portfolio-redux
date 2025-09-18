@@ -39,6 +39,27 @@ jobs:
       - name: 🧪 Test
         run: npm run test:ci
 
+      ## START FTP DEPLOY TEST
+
+      - name: Find and Replace Basename
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "/portfolio-redux"
+          replace: ""
+          regex: false
+          include: "**/index*.!(map)"
+
+      - name: 🚀 FTP Deploy to Bluehost
+        uses: samkirkland/ftp-deploy-action@v4.3.6
+        with:
+          server: ${{ secrets.FTPDEPLOY_SERVER }}
+          username: ${{ secrets.FTPDEPLOY_USERNAME }}
+          password: ${{ secrets.FTPDEPLOY_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+
+      ## END FTP DEPLOY TEST
+
       # Upload dist artifacts
       - uses: actions/upload-artifact@v4
         with:
