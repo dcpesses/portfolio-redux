@@ -116,7 +116,7 @@ jobs:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**/**index**.!(map)"
+          include: "**index*.{html,js,css}"
 
       - name: Find and Replace Basename
         id: find_replace_basename2
@@ -125,7 +125,8 @@ jobs:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**/**index**.(html|js|css)"
+          include: "**/index*.{html,js,css}"
+
 
       - name: Find and Replace Basename
         id: find_replace_basename3
@@ -134,19 +135,19 @@ jobs:
           find: "/portfolio-redux"
           replace: ""
           regex: false
-          include: "**/**index**.*(html|js|css)"
+          include: "**/index*.*{html,js,css}"
 
 
       - name: Modified Files
         run:
-          echo "find_replace_datetime:"
-          echo "${{ steps.find_replace_datetime.outputs.modifiedFiles }}\n"
-          echo "find_replace_basename1:"
-          echo "${{ steps.find_replace_basename1.outputs.modifiedFiles }}\n"
-          echo "find_replace_basename2:"
-          echo "${{ steps.find_replace_basename2.outputs.modifiedFiles }}\n"
-          echo "find_replace_basename3:"
-          echo "${{ steps.find_replace_basename3.outputs.modifiedFiles }}\n"
+          echo "datetime:"
+          echo "${{ steps.find_replace_datetime.outputs.modifiedFiles }} \r\n"
+          echo "basename1:"
+          echo "${{ steps.find_replace_basename1.outputs.modifiedFiles }} \r\n"
+          echo "basename2:"
+          echo "${{ steps.find_replace_basename2.outputs.modifiedFiles }} \r\n"
+          echo "basename3:"
+          echo "${{ steps.find_replace_basename3.outputs.modifiedFiles }} \r\n"
 
       - name: 🚀 FTP Deploy to Bluehost
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
