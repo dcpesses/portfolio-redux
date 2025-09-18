@@ -22,10 +22,10 @@ jobs:
     name: Build & Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: 🏗 Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: npm
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Download coverage artifacts
       - uses: actions/download-artifact@v5
@@ -65,7 +65,7 @@ jobs:
           name: coverage
 
       - name: 📈 Upload coverage to Codecov
-        uses: codecov/codecov-action@v5.4.3
+        uses: codecov/codecov-action@v5.5.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
@@ -95,7 +95,7 @@ jobs:
       # - name: Debug current date
       #   run: echo "${{ env.NOW }}" # Gives "2024-02-16 16:53:32 PST"
 
-      - name: Find and Replace
+      - name: Find and Replace Date & Time
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           find: "DATE_TIME"
@@ -108,3 +108,30 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
+
+      - name: Find and Replace Basename
+        id: find_replace_basename
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "/portfolio-redux"
+          replace: ""
+          regex: false
+          include: "**index*.{html,js,css}"
+
+      - name: Find and Replace Basename (Webmanifest)
+        id: find_replace_basename_webmanifest
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "/portfolio-redux"
+          replace: ""
+          regex: false
+          include: "**site.webmanifest"
+
+      - name: 🚀 FTP Deploy to Bluehost
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTPDEPLOY_SERVER }}
+          username: ${{ secrets.FTPDEPLOY_USERNAME }}
+          password: ${{ secrets.FTPDEPLOY_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
