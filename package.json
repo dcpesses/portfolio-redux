@@ -1,7 +1,7 @@
 {
   "name": "portfolio-redux",
   "version": "1.0.0",
-  "description": "Portfolio site",
+  "description": "Portfolio site for Daniel Pesses, a passionate senior web developer from Los Angeles who specializes in crafting innovative front-end web applications using ReactJS, Node.js, and modern development practices.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dcpesses/portfolio-redux.git"

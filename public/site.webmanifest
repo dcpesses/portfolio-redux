@@ -1,1 +1,19 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "Daniel Pesses | Senior Web Developer",
+  "short_name": "Daniel Pesses",
+  "description": "Portfolio site for Daniel Pesses, a passionate senior web developer from Los Angeles who specializes in crafting innovative front-end web applications using ReactJS, Node.js, and modern development practices.",
+  "start_url": "https://portfolio.dannyzone.com",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#212529"
+}
