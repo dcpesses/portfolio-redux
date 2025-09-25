@@ -1,7 +1,7 @@
 {
   "name": "portfolio-redux",
   "version": "1.0.0",
-  "description": "Portfolio site",
+  "description": "Portfolio site for Daniel Pesses, a passionate senior web developer from Los Angeles who specializes in crafting innovative front-end web applications using ReactJS, Node.js, and modern development practices.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dcpesses/portfolio-redux.git"
@@ -51,7 +51,7 @@
     "@commitlint/prompt-cli": "^19.8.1",
     "@eslint/compat": "^1.3.2",
     "@eslint/eslintrc": "^3.3.0",
-    "@eslint/js": "^9.35.0",
+    "@eslint/js": "^9.36.0",
     "@giof/react-umami": "^2.6.12",
     "@marsidev/react-turnstile": "^1.3.1",
     "@testing-library/dom": "^10.4.1",
@@ -65,7 +65,7 @@
     "@typescript-eslint/parser": "^8.44.0",
     "@vitejs/plugin-react-swc": "^4.1.0",
     "@vitest/coverage-v8": "^3.2.4",
-    "eslint": "^9.35.0",
+    "eslint": "^9.36.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-testing-library": "^7.8.0",
