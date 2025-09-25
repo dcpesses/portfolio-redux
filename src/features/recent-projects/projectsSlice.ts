@@ -57,7 +57,7 @@ const initialState: ProjectsState = {
       image: thumbChallah,
       url: 'https://www.challahcreations.com/',
       about: undefined,
-      description: 'Built and deployed a responsive and easy to update WordPress site for my sister\'s challah baking business, optimized for mobile usability, SEO, and page speed performance.',
+      description: 'Built and deployed a responsive and easy to update WordPress site for a challah baking business, optimized for mobile usability, SEO, and page speed performance.',
       screenshots: ['challah-creations1.jpg'],
       demo: null
     },
